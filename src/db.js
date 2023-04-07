@@ -2,10 +2,11 @@ const mysql = require("mysql");
 const util = require("util");
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "classcircle",
+  host: process.env.DATABASE_HOST,
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE_NAME,
+  charset: "utf8mb4",
 });
 
 con.connect(function (err) {

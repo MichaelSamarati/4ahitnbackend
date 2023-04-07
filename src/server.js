@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -19,10 +20,6 @@ const io = new Server(server, {
 const PORT = process.env.PORT || 80;
 
 io.on("connection", (socket) => {
-  // var clientIp = socket.request.connection.remoteAddress;
-
-  // console.log(clientIp, "adasda");
-  // console.log(socket.id);
   socket.on("disconnect", () => {});
   socket.on("test", (msg) => {
     console.log(msg);
@@ -49,8 +46,40 @@ io.on("connection", (socket) => {
       const normalizedStudent = await normalizeStudent(student);
       socket.emit("student_success", normalizedStudent);
     } catch (e) {
-      console.log(e);
       socket.emit("student_failure", "Error occured!");
+    }
+  });
+  socket.on("comments", async (data) => {
+    try {
+      const studentid = data.id;
+      const comments = await db.query(
+        "select * from comments where comments.studentid=" + studentid
+      );
+      socket.emit("comments_success", comments);
+    } catch (e) {
+      socket.emit("comments_failure", "Error occured!");
+    }
+  });
+  socket.on("comment_insert", async (data) => {
+    try {
+      const name = data.name;
+      const message = data.message;
+      const studentid = data.studentid;
+      var dat = new Date(data.dat).toISOString().slice(0, 10).replace(/-/g, "");
+      await db.query(
+        "insert into comments (name, message, dat, studentid) values ('" +
+          name +
+          "', '" +
+          message +
+          "', '" +
+          dat +
+          "'," +
+          studentid +
+          ")"
+      );
+      socket.emit("comments_insert_success", "Success!");
+    } catch (e) {
+      socket.emit("comments_insert_failure", "Error occured!");
     }
   });
 });
@@ -59,12 +88,3 @@ server.listen(PORT, () => {
   console.log("Backend server is listening on port: " + PORT + " ...");
 });
 
-async function init() {
-  // // console.log(
-  // //   await file.getBase64FromImageFile(
-  // //     "C:/code/20230402_4AHITN_Backend/backend/img/p1.gif"
-  // //   )
-  // // );
-  // console.log(await db.query("select * from students"));
-}
-init();
