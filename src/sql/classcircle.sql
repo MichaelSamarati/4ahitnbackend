@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS students(
 	favouriteSubject VARCHAR(30),
 	favouriteColor VARCHAR(20),
 	phone VARCHAR(20),
-	favouriteFood VARCHAR(30),
-	favouriteMedia VARCHAR(50),
+	favouriteFood VARCHAR(40),
+	favouriteMedia VARCHAR(300),
 	specialClassFunction VARCHAR(30),
 	socialmedia VARCHAR(200),
 	CONSTRAINT PRIMARY KEY(studentid)
