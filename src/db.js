@@ -1,9 +1,6 @@
 const mysql = require("mysql");
 const util = require("util");
 
-console.info('process.env.DATABASE_PASSWORD was ' + (!process.env.DATABASE_PASSWORD ? 'NOT ' : '') + 'set')
-
-
 var con = mysql.createConnection({
   host: process.env.DATABASE_HOST,
   user: process.env.DATABASE_USER,
