@@ -100,8 +100,6 @@ INSERT INTO students (
 	"https://github.com/MichaelSamarati"
 );
 
-select 'here' as "here";
-
 INSERT INTO students (
 	forename,
 	lastname,
@@ -164,7 +162,7 @@ INSERT INTO students (
 	hobbies,
 	pets,
 	allergies,
-  	schoolBeforeHTL,
+  schoolBeforeHTL,
 	burgerPizzaAvocado,
 	favouriteSubject,
 	favouriteColor,
