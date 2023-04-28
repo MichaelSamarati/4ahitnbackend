@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
   socket.on("students", async (data) => {
     try {
       const students = await db.query(
-        "select * from students order by lastname and forename<>'Tim'"
+        "select * from students order by lastname"
       );
       // await Promise.all(() => {
       for (const student of students) {
@@ -128,7 +128,7 @@ server.listen(PORT, () => {
 
 async function readImageFiles() {
   try {
-    const imageNames = await db.query("select imageName from students");
+    const imageNames = await db.query("select imageName from students order by lastname");
     await Promise.all(
       imageNames.map(async (x) => {
         const base64StringImage = await file.getBase64FromImageFile(
