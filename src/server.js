@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 
 const db = require("./db");
-const { normalizeStudent } = require("./student");
+const { exchangeImagenameWithImage } = require("./student");
 
 app.use(cors());
 
@@ -26,10 +26,10 @@ io.on("connection", (socket) => {
   });
   socket.on("students", async (data) => {
     try {
-      const students = await db.query("select * from students");
+      const students = await db.query("select * from students order by lastname");
       const normalizedStudents = await Promise.all(
         students.map(async (student) => {
-          return await normalizeStudent(student);
+          return await exchangeImagenameWithImage(student);
         })
       );
       socket.emit("students_success", normalizedStudents);
