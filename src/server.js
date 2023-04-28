@@ -19,6 +19,9 @@ const io = new Server(server, {
 });
 const PORT = process.env.PORT || 80;
 
+
+const file = require("./file");
+
 var imagesMap = new Map();
 
 io.on("connection", (socket) => {
