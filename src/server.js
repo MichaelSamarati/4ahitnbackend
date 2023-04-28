@@ -29,30 +29,26 @@ io.on("connection", (socket) => {
       const students = await db.query(
         "select * from students order by lastname"
       );
-        // await Promise.all(() => {
-          for (const student of students) {
-            let studentWithImage = await exchangeImagenameWithImage(student);
-        socket.emit(
-          "students_success",
-          studentWithImage
-        );}
-        }
-          
-        // );
-      
- // await Promise.all(
-  // students.map(async (student) => {
-  //   await socket.emit(
-  //     "students_success",
-  //     await exchangeImagenameWithImage(student)
-  //   );
-  // });
-  // // );
+      // await Promise.all(() => {
+      for (const student of students) {
+        let studentWithImage = await exchangeImagenameWithImage(student);
+        socket.emit("students_success", studentWithImage);
+      }
 
-  //       Promise.all(promises).then(() => 
-  //       self.resultingFunction(self.files)
-    );
+      // );
 
+      // await Promise.all(
+      // students.map(async (student) => {
+      //   await socket.emit(
+      //     "students_success",
+      //     await exchangeImagenameWithImage(student)
+      //   );
+      // });
+      // // );
+
+      //       Promise.all(promises).then(() =>
+      //       self.resultingFunction(self.files)
+      // );
     } catch (e) {
       socket.emit("students_failure", "Error occured!");
     }
