@@ -134,7 +134,6 @@ async function readImageFiles() {
         const base64StringImage = await file.getBase64FromImageFile(
           x.imageName
         );
-        console.log(base64StringImage);
         imagesMap.set(x.imageName, base64StringImage);
       })
     );
