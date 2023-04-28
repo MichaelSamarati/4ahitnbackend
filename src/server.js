@@ -19,10 +19,7 @@ const io = new Server(server, {
 });
 const PORT = process.env.PORT || 80;
 
-
 var imagesMap = new Map();
-
-
 
 io.on("connection", (socket) => {
   socket.on("disconnect", () => {});
@@ -36,7 +33,10 @@ io.on("connection", (socket) => {
       );
       // await Promise.all(() => {
       for (const student of students) {
-        let studentWithImage = await exchangeImagenameWithImage(student, imagesMap);
+        let studentWithImage = await exchangeImagenameWithImage(
+          student,
+          imagesMap
+        );
         socket.emit("students_success", studentWithImage);
       }
 
@@ -124,12 +124,9 @@ server.listen(PORT, () => {
   console.log("Backend server is listening on port: " + PORT + " ...");
 });
 
-
 async function readImageFiles() {
   try {
-    const imageNames = await db.query(
-      "select imagename from students where studentid = " + data.id
-    );
+    const imageNames = await db.query("select imagename from students");
     imageNames.map(async (imageName) => {
       const base64StringImage = await file.getBase64FromImageFile(imageName);
       imagesMap.set(imageName, base64StringImage);
