@@ -29,14 +29,12 @@ io.on("connection", (socket) => {
       const students = await db.query(
         "select * from students order by lastname"
       );
-      // await Promise.all(
-        students.map(async (student) => {
-          socket.emit(
-            "students_success",
-            await exchangeImagenameWithImage(student)
-          );
-        })
-      // );
+      for await (const student of students) {
+        socket.emit(
+          "students_success",
+          await exchangeImagenameWithImage(student)
+        );
+      }
     } catch (e) {
       socket.emit("students_failure", "Error occured!");
     }
