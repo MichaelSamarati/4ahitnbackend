@@ -128,14 +128,12 @@ server.listen(PORT, () => {
 
 async function readImageFiles() {
   try {
-    const imageNames = await db
-      .query("select imagename from students")
-      .map((x) => x.imageName);
+    const imageNames = await db.query("select imagename from students");
     console.log(imageNames);
-    imageNames.map(async (imageName) => {
-      const base64StringImage = await file.getBase64FromImageFile(imageName);
+    imageNames.map(async (x) => {
+      const base64StringImage = await file.getBase64FromImageFile(x.imageName);
       console.log(base64StringImage);
-      imagesMap.set(imageName, base64StringImage);
+      imagesMap.set(x.imageName, base64StringImage);
     });
   } catch (e) {
     throw e;
