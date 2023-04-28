@@ -19,7 +19,6 @@ const io = new Server(server, {
 });
 const PORT = process.env.PORT || 80;
 
-
 const file = require("./file");
 
 var imagesMap = new Map();
@@ -129,7 +128,9 @@ server.listen(PORT, () => {
 
 async function readImageFiles() {
   try {
-    const imageNames = await db.query("select imagename from students");
+    const imageNames = await db
+      .query("select imagename from students")
+      .map((x) => x.imageName);
     console.log(imageNames);
     imageNames.map(async (imageName) => {
       const base64StringImage = await file.getBase64FromImageFile(imageName);
