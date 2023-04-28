@@ -33,7 +33,6 @@ io.on("connection", (socket) => {
       const students = await db.query(
         "select * from students order by lastname"
       );
-      // await Promise.all(() => {
       for (const student of students) {
         let studentWithImage = await exchangeImagenameWithImage(
           student,
@@ -41,52 +40,22 @@ io.on("connection", (socket) => {
         );
         socket.emit("students_success", studentWithImage);
       }
-
-      // );
-
-      // await Promise.all(
-      // students.map(async (student) => {
-      //   await socket.emit(
-      //     "students_success",
-      //     await exchangeImagenameWithImage(student)
-      //   );
-      // });
-      // // );
-
-      //       Promise.all(promises).then(() =>
-      //       self.resultingFunction(self.files)
-      // );
     } catch (e) {
       socket.emit("students_failure", "Error occured!");
     }
   });
-  // socket.on("students", async (data) => {
+  // socket.on("student", async (data) => {
   //   try {
-  //     const students = await db.query(
-  //       "select * from students order by lastname"
+  //     const res = await db.query(
+  //       "select * from students where studentid = " + data.id
   //     );
-  //     const normalizedStudents = await Promise.all(
-  //       students.map(async (student) => {
-  //         return await exchangeImagenameWithImage(student);
-  //       })
-  //     );
-  //     socket.emit("students_success", normalizedStudents);
+  //     const student = res[0];
+  //     const normalizedStudent = await exchangeImagenameWithImage(student);
+  //     socket.emit("student_success", normalizedStudent);
   //   } catch (e) {
-  //     socket.emit("students_failure", "Error occured!");
+  //     socket.emit("student_failure", "Error occured!");
   //   }
   // });
-  socket.on("student", async (data) => {
-    try {
-      const res = await db.query(
-        "select * from students where studentid = " + data.id
-      );
-      const student = res[0];
-      const normalizedStudent = await exchangeImagenameWithImage(student);
-      socket.emit("student_success", normalizedStudent);
-    } catch (e) {
-      socket.emit("student_failure", "Error occured!");
-    }
-  });
   socket.on("comments", async (data) => {
     try {
       const studentid = data.id;
