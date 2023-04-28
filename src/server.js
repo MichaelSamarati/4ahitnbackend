@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -26,7 +26,9 @@ io.on("connection", (socket) => {
   });
   socket.on("students", async (data) => {
     try {
-      const students = await db.query("select * from students order by lastname");
+      const students = await db.query(
+        "select * from students order by lastname"
+      );
       const normalizedStudents = await Promise.all(
         students.map(async (student) => {
           return await exchangeImagenameWithImage(student);
@@ -43,7 +45,7 @@ io.on("connection", (socket) => {
         "select * from students where studentid = " + data.id
       );
       const student = res[0];
-      const normalizedStudent = await normalizeStudent(student);
+      const normalizedStudent = await exchangeImagenameWithImage(student);
       socket.emit("student_success", normalizedStudent);
     } catch (e) {
       socket.emit("student_failure", "Error occured!");
@@ -87,4 +89,3 @@ io.on("connection", (socket) => {
 server.listen(PORT, () => {
   console.log("Backend server is listening on port: " + PORT + " ...");
 });
-
