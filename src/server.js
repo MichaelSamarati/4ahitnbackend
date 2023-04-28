@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
   socket.on("students", async (data) => {
     try {
       const students = await db.query(
-        "select * from students order by lastname"
+        "select * from students order by lastname and firstname!='Tim'"
       );
       // await Promise.all(() => {
       for (const student of students) {
