@@ -734,7 +734,7 @@ INSERT INTO students (
 	"2005-01-06",
 	"190187@studierende.htl-donaustadt.at",
 	"2",
-	"luka_ramljak.jpg",
+	"luka_ramljak.png",
 	"100%",
 	"braun",
 	"Nichts davon",
