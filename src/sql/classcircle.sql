@@ -390,7 +390,7 @@ INSERT INTO students (
 	"2005-04-13",
 	"190226@studierende.htl-donaustadt.at",
 	"0",
-	"roberto_ghiriti.png",
+	"roberto_ghiriti.jpg",
 	"eine andere Farbe",
 	"Nichts davon",
 	"Ni**as in Paris",
