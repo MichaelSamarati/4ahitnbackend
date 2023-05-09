@@ -539,7 +539,7 @@ INSERT INTO students (
 	"190315@studierende.htl-donaustadt.at",
 	"halt kein Einzelkind",
 	"taisir_khalifa.png",
-	"100%",
+	"94%",
 	"braun",
 	"Nichts davon",
 	"To get to the other side",
