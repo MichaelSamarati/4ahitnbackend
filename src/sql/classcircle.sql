@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS students(
 	studentid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
 	forename VARCHAR(40) NOT NULL,
 	lastname VARCHAR(40) NOT NULL,
+	gender VARCHAR(20) NOT NULL,
 	birthday DATE,
 	email VARCHAR(100) NOT NULL,
 	siblings VARCHAR(100),
@@ -51,6 +52,7 @@ CREATE TABLE IF NOT EXISTS comments(
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -76,6 +78,7 @@ INSERT INTO students (
 ) VALUES (
 	"Tim",
 	"Altmann",
+	"m",
 	"2004-06-10",
 	"180185@studierende.htl-donaustadt.at",
 	"0",
@@ -103,6 +106,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -128,6 +132,7 @@ INSERT INTO students (
 ) VALUES (
 	"Hatiǆa",
 	"Begagić",
+	"f",
 	"2003-01-21",
 	"210431@studierende.htl-donaustadt.at",
 	"1",
@@ -155,6 +160,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -180,6 +186,7 @@ INSERT INTO students (
 ) VALUES (
 	"Josip",
 	"Benkovic",
+	"m",
 	"2004-06-09",
 	"190199@studierende.htl-donaustadt.at",
 	"0",
@@ -207,6 +214,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -231,6 +239,7 @@ INSERT INTO students (
 ) VALUES (
 	"Salih",
 	"Bilgin",
+	"m",
 	"2005-11-17",
 	"190252@studierende.htl-donaustadt.at",
 	"3",
@@ -257,6 +266,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -282,6 +292,7 @@ INSERT INTO students (
 ) VALUES (
 	"Zerda",
 	"Cakir",
+	"f",
 	"2005-05-03",
 	"190251@studierende.htl-donaustadt.at",
 	"2",
@@ -309,6 +320,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -334,6 +346,7 @@ INSERT INTO students (
 ) VALUES (
 	"Michael",
 	"Falk",
+	"m",
 	"2004-10-23",
 	"190197@studierende.htl-donaustadt.at",
 	"2",
@@ -361,6 +374,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -385,6 +399,7 @@ INSERT INTO students (
 ) VALUES (
 	"Roberto",
 	"Ghiriti",
+	"m",
 	"2005-04-13",
 	"190226@studierende.htl-donaustadt.at",
 	"0",
@@ -411,6 +426,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -435,6 +451,7 @@ INSERT INTO students (
 ) VALUES (
 	"Florian",
 	"Hedrich",
+	"m",
 	"2003-06-11",
 	"190181@studierende.htl-donaustadt.at",
 	"0",
@@ -461,6 +478,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -486,6 +504,7 @@ INSERT INTO students (
 ) VALUES (
 	"Nagi",
 	"Ibrahim",
+	"m",
 	"2004-03-30",
 	"190296@studierende.htl-donaustadt.at",
 	"1",
@@ -513,6 +532,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -535,6 +555,7 @@ INSERT INTO students (
 ) VALUES (
 	"Taisir",
 	"Khalifa",
+	"f",
 	"2004-12-12",
 	"190315@studierende.htl-donaustadt.at",
 	"halt kein Einzelkind",
@@ -559,6 +580,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -584,6 +606,7 @@ INSERT INTO students (
 ) VALUES (
 	"Philipp",
 	"Lueger",
+	"m",
 	"2005-01-21",
 	"190189@studierende.htl-donaustadt.at",
 	"1",
@@ -611,6 +634,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -632,6 +656,7 @@ INSERT INTO students (
 ) VALUES (
 	"Alexander",
 	"Mayerhofer",
+	"m",
 	"2003-08-03",
 	"160502@studierende.htl-donaustadt.at",
 	"4",
@@ -655,6 +680,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -680,6 +706,7 @@ INSERT INTO students (
 ) VALUES (
 	"Lukas",
 	"Milicic",
+	"m",
 	"2005-04-27",
 	"190312@studierende.htl-donaustadt.at",
 	"2",
@@ -707,6 +734,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -731,6 +759,7 @@ INSERT INTO students (
 ) VALUES (
 	"Stefan",
 	"Milojkovic",
+	"m",
 	"2005-04-01",
 	"190198@studierende.htl-donaustadt.at",
 	"4",
@@ -757,6 +786,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -781,6 +811,7 @@ INSERT INTO students (
 ) VALUES (
 	"Alexander",
 	"Pauer",
+	"m",
 	"2005-04-06",
 	"190202@studierende.htl-donaustadt.at",
 	"2",
@@ -807,6 +838,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -831,6 +863,7 @@ INSERT INTO students (
 ) VALUES (
 	"Luka",
 	"Ramljak",
+	"m",
 	"2005-01-06",
 	"190187@studierende.htl-donaustadt.at",
 	"2",
@@ -857,6 +890,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -881,6 +915,7 @@ INSERT INTO students (
 ) VALUES (
 	"Umut",
 	"Sakar",
+	"m",
 	"2003-02-21",
 	"180191@studierende.htl-donaustadt.at",
 	"1",
@@ -907,6 +942,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -932,6 +968,7 @@ INSERT INTO students (
 ) VALUES (
 	"Michael",
 	"Samarati",
+	"m",
 	"2005-06-03",
 	"190182@studierende.htl-donaustadt.at",
 	"6",
@@ -959,6 +996,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -983,6 +1021,7 @@ INSERT INTO students (
 ) VALUES (
 	"Philipp",
 	"Vollmann",
+	"m",
 	"2004-02-11",
 	"180194@studierende.htl-donaustadt.at",
 	"0",
@@ -1009,6 +1048,7 @@ INSERT INTO students (
 INSERT INTO students (
 	forename,
 	lastname,
+	gender,
 	birthday,
 	email,
 	siblings,
@@ -1034,6 +1074,7 @@ INSERT INTO students (
 ) VALUES (
 	"Linda",
 	"Yusupova",
+	"f",
 	"2003-12-31",
 	"190222@studierende.htl-donaustadt.at",
 	"3",
