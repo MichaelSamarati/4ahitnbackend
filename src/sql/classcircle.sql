@@ -82,7 +82,7 @@ INSERT INTO students (
 	"2004-10-04",
 	"190282@studierende.htl-donaustadt.at",
 	"1",
-	"tim_altmann.png",
+	"tarik_akpinar.png",
 	"17%",
 	"eine andere Farbe",
 	"Nichts davon",
