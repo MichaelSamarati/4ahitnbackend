@@ -978,7 +978,7 @@ INSERT INTO students (
 	"Nichts davon",
 	"Aqua - Barbie Girl",
 	"Chicken-Wings im Sale!!1 bei Lidl",
-	"Netzwerktechnik-Maschine, der Router höchstpersönlich && Lieber im Stehen scheißen, als in der Scheiße stehen.",
+	"Lieber im Stehen scheißen, als in der Scheiße stehen.",
 	"Nachdenken",
 	"Keine",
 	"Keine",
