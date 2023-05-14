@@ -1032,7 +1032,7 @@ INSERT INTO students (
 	"100%",
 	"eine andere Farbe",
 	"Nichts davon",
-	"Aqua - Barbie Girl",
+	"Kavinsky - Nightcall",
 	"Chicken-Wings im Sale!!1 bei Lidl",
 	"Lieber im Stehen scheißen, als in der Scheiße stehen.",
 	"Nachdenken",
@@ -1043,8 +1043,8 @@ INSERT INTO students (
 	"ITP2",
 	"#00fced",
 	"Windows-Phone",
-	"Pizza Hawaii",
-	"Serien: Violet Evergarden; Alle hassen Chris; Filme: Die Eisprinzen; Der gezähmte Widerspenstige",
+	"Palatschinken/Блины",
+	"Serie: Violet Evergarden - Film: Der gezähmte Widerspenstige",
 	"Klassenstreber",
 	"https://github.com/MichaelSamarati"
 );
