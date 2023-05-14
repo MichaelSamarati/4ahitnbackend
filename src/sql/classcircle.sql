@@ -706,7 +706,8 @@ INSERT INTO students (
 	favouriteSubject,
 	favouriteColor,
 	phone,
-	favouriteMedia
+	favouriteMedia,
+	specialClassFunction
 ) VALUES (
 	"Alexander",
 	"Mayerhofer",
@@ -728,7 +729,8 @@ INSERT INTO students (
 	"BSPK",
 	"#81e452",
 	"Android",
-	"Peaky blinders"
+	"Peaky blinders",
+	"/"
 );
 
 INSERT INTO students (
