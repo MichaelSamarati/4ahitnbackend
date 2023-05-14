@@ -26,19 +26,19 @@ var imagesMap = new Map();
 readImageFiles();
 
 io.on("connection", (socket) => {
-  var address = socket.handshake.address;
-  console.log("New connection from " + address.address + ":" + address.port);
+  var clientIp = socket.conn.remoteAddress;
+  console.log("New connection from " + clientIp);
   socket.on("disconnect", () => {});
   socket.on("test", (msg) => {
     console.log(msg);
   });
   socket.on("students", async (data) => {
-    console.log("students requested!")
+    console.log("students requested!");
     try {
       const students = await db.query(
         "select * from students order by lastname"
       );
-      console.log("students fetched from database!")
+      console.log("students fetched from database!");
       for (const student of students) {
         let studentWithImage = await exchangeImagenameWithImage(
           student,
@@ -46,7 +46,7 @@ io.on("connection", (socket) => {
         );
         socket.emit("students_success", studentWithImage);
       }
-      console.log("students process finished!")
+      console.log("students process finished!");
     } catch (e) {
       socket.emit("students_failure", "Error occured!");
     }
