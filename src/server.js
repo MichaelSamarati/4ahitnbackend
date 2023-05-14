@@ -23,16 +23,22 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
+readImageFiles();
+
 io.on("connection", (socket) => {
+  var address = socket.handshake.address;
+  console.log("New connection from " + address.address + ":" + address.port);
   socket.on("disconnect", () => {});
   socket.on("test", (msg) => {
     console.log(msg);
   });
   socket.on("students", async (data) => {
+    console.log("students requested!")
     try {
       const students = await db.query(
         "select * from students order by lastname"
       );
+      console.log("students fetched from database!")
       for (const student of students) {
         let studentWithImage = await exchangeImagenameWithImage(
           student,
@@ -40,6 +46,7 @@ io.on("connection", (socket) => {
         );
         socket.emit("students_success", studentWithImage);
       }
+      console.log("students process finished!")
     } catch (e) {
       socket.emit("students_failure", "Error occured!");
     }
@@ -97,7 +104,9 @@ server.listen(PORT, () => {
 
 async function readImageFiles() {
   try {
-    const imageNames = await db.query("select imageName from students order by lastname");
+    const imageNames = await db.query(
+      "select imageName from students order by lastname"
+    );
     await Promise.all(
       imageNames.map(async (x) => {
         const base64StringImage = await file.getBase64FromImageFile(
@@ -111,4 +120,10 @@ async function readImageFiles() {
   }
 }
 
-readImageFiles();
+function hello() {
+  setInterval(() => {
+    console.log(new Date());
+  }, 128000);
+}
+
+hello();
