@@ -96,13 +96,11 @@ io.on("connection", (socket) => {
   });
 });
 
-async () => {
-  await readImageFiles();
-  server.listen(PORT, () => {
-    console.log("Backend server is listening on port: " + PORT + " ...");
-  });
-};
+readImageFiles();
 
+server.listen(PORT, () => {
+  console.log("Backend server is listening on port: " + PORT + " ...");
+});
 
 async function readImageFiles() {
   try {
