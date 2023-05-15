@@ -23,7 +23,9 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
-readImageFiles();
+async () => {
+  await readImageFiles();
+};
 
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
