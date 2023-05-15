@@ -23,10 +23,6 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
-async () => {
-  await readImageFiles();
-};
-
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
   console.log("New connection from " + clientIp);
@@ -100,9 +96,13 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log("Backend server is listening on port: " + PORT + " ...");
-});
+async () => {
+  await readImageFiles();
+  server.listen(PORT, () => {
+    console.log("Backend server is listening on port: " + PORT + " ...");
+  });
+};
+
 
 async function readImageFiles() {
   try {
