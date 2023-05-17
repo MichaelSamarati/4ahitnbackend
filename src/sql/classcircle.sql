@@ -1110,6 +1110,7 @@ INSERT INTO students (
   schoolBeforeHTL,
 	burgerPizzaAvocado,
 	favouriteSubject,
+	favouriteColor,
 	phone,
 	socialmedia
 ) VALUES (
@@ -1129,6 +1130,7 @@ INSERT INTO students (
 	"AHS",
 	"🍕",
 	"SEW",
+	"#000000",
 	"Android",
 	"github.com/ViktorTrojan"
 );
