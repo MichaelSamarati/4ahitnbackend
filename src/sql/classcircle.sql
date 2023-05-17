@@ -1,4 +1,3 @@
-
 DROP DATABASE classcircle;
 
 SET NAMES 'utf8mb4';
@@ -15,6 +14,7 @@ CREATE TABLE IF NOT EXISTS persons (
 	lastname VARCHAR(40) NOT NULL,
 	gender VARCHAR(20) NOT NULL,
 	birthday DATE,
+	age VARCHAR(30	),
 	email VARCHAR(100) NOT NULL,
 	siblings VARCHAR(100),
 	imageName VARCHAR(256),
@@ -34,8 +34,16 @@ CREATE TABLE IF NOT EXISTS persons (
 	phone VARCHAR(100),
 	favouriteFood VARCHAR(100),
 	favouriteMedia VARCHAR(300),
-	specialClassFunction VARCHAR(100),
+	specialClassFunction VARCHAR(200),
 	socialmedia VARCHAR(200),
+	subjects VARCHAR(200),
+	holidayDream VARCHAR(300),
+	schoolFromYouth VARCHAR(200),
+	formerJobs VARCHAR(300),
+	sideJobs VARCHAR(300),
+	drink VARCHAR(100),
+	operatingSystem VARCHAR(200),
+	vehicle VARCHAR(200),
 	CONSTRAINT PRIMARY KEY(personid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci; 
 
@@ -1242,9 +1250,410 @@ INSERT INTO persons (
 );
 
 
+
+
+
+
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	birthday,
+	email,
+	subjects,
+	holidayDream,
+	formerJobs,
+	sideJobs,
+	pets,
+	drink,
+	operatingSystem,
+	favouriteFood,
+	vehicle,
+	specialClassFunction
+) VALUES (
+	"Veronika",
+	"Schippani-Stockinger",
+	"f",
+	"1991-09-13",
+	"SCHI@htl-donaustadt.at",
+	"Mathematik, Ethik, SOPK",
+	"Pizza essen in Neapel",
+	"Buchhalterin (Schwerpunkt Steuern)",
+	"Schulungstätigkeit als Fachkraft für Gewaltprävention",
+	"Katzen",
+	"Kaffee",
+	"Windows",
+	"Pizza oder Pommes",
+	"am liebsten das Fahrrad",
+	"Nicht schockiert sein - ich bin eure JVin"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email,
+	subjects,
+	favouriteSubject,
+	schoolFromYouth,
+	formerJobs,
+	sideJobs,
+	quote,
+	pets,
+	hobbies,
+	drink,
+	favouriteColor,
+	operatingSystem,
+	vehicle
+) VALUES (
+	"Patrick",
+	"Zivkovic",
+	"m",
+	"ZIVK@htl-donaustadt.at",
+	"SEW, NWT, MEDT",
+	"Netzwerktechnik - Security Bereich",
+	"HTL Donaustadt",
+	"Cloud Systems Engineer, Security Engineer",
+	"IT Consulting",
+	"Wann immer du fällst, hebe etwas auf.",
+	"Hund",
+	"Fotographie, Zeichnen, Musik",
+	"Kaffee",
+	"#097953",
+	"macOS Ventura (immer die Aktuellste Version)",
+	"U-Bahn hpts. U6"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	age,
+	email,
+	subjects,
+	holidayDream,
+	schoolFromYouth,
+	formerJobs,
+	sideJobs,
+	pets,
+	hobbies,
+	favouriteColor,
+	vehicle
+) VALUES (
+	"Lucie",
+	"Langer",
+	"f",
+	"42",
+	"LANG@htl-donaustadt.at",
+	"AM, NWT (Kryptografie)",
+	"Mischung aus Entspannung und Erkundung von Neuem, draußen sein",
+	"Gymnasium in Deutschland",
+	"IT-Beraterin, Managerin von Forschungsprojekten",
+	"Lektorin an einer FH",
+	"Keine",
+	"Zeit mit meinem Kind verbringen; wenn ich mal alleine bin: lesen",
+	"bunt :-)",
+	"Fahrrad"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	age,
+	email,
+	subjects,
+	favouriteSubject,
+	schoolFromYouth,
+	formerJobs,
+	sideJobs,
+	pets,
+	hobbies,
+	drink,
+	favouriteColor,
+	operatingSystem,
+	vehicle
+) VALUES (
+	"Thomas",
+	"Angermayer",
+	"m",
+	"43",
+	"ANGE@htl-donaustadt.at",
+	"NWT1, ITP2 (DA-Betreuung)",
+	"NWT1",
+	"VS, AHS (Unterstufe), HTL, FH",
+	"Ja",
+	"Keine",
+	"Keine",
+	"Wandern, Geocaching",
+	"Kaffee",
+	"#ffff00",
+	"Windows 10, Debian GNU/Linux",
+	"Wiener Linien"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	age,
+	email,
+	subjects,
+	holidayDream,
+	schoolFromYouth,
+	formerJobs,
+	sideJobs,
+	quote,
+	pets,
+	hobbies,
+	drink,
+	operatingSystem,
+	vehicle,
+	specialClassFunction
+) VALUES (
+	"Thomas",
+	"Spachinger",
+	"m",
+	"54",
+	"SPAC@htl-donaustadt.at",
+	"SEW, NWT, LA1, KSN, ITP2",
+	"Entspannen, ein bisschen Sport, ein bisschen Kultur",
+	"Unterstufe BRG, dann HTL Elektrotechnik",
+	"Selbstständig und Softwareentwickler",
+	"Keine",
+	"Für den Optimisten ist das Glas halb voll.",
+	"Einen Hund (Havaneser)",
+	"Lesen, Wandern, Tanzen",
+	"Kaffee",
+	"Windows 10 Noch Win10",
+	"Meist öffentlich unterwegs",
+	"Jahrgangsvorstand der 3BHIT"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	age,
+	email,
+	subjects,
+	favouriteSubject,
+	holidayDream,
+	schoolFromYouth,
+	formerJobs,
+	sideJobs,
+	quote,
+	favouriteSong,
+	pets,
+	hobbies,
+	drink,
+	favouriteColor,
+	operatingSystem,
+	favouriteFood,
+	vehicle
+) VALUES (
+	"Martina",
+	"Hiesinger",
+	"f",
+	"58",
+	"HIES@htl-donaustadt.at",
+	"ITP2, SEW, INSY",
+	"Kann mich nicht entscheiden!",
+	"Möglichst weit weg fremde Länder/Kulturen erkunden",
+	"HAK, Pädagogische Akademie",
+	"IT-Consultant, IT-Projektmanager",
+	"Selbständigkeit",
+	"Jeder, der sich die Fähigkeit erhält, Schönes zu erkennen, wird nie alt werden. - Franz Kafka",
+	"L'altra parte del mondo - Lucio Dalla",
+	"Keine",
+	"Reisen, Lesen, Garten",
+	"Kaffee",
+	"#C0C0C0",
+	"macOS Ventura, Big Sur",
+	"Meine selbst gebackene Sachertorte",
+	"Jaguar XJ8"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Merisa",
+	"Mesanovic",
+	"f",
+	"MESA@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Walter",
+	"Mantl-Mussak",
+	"m",
+	"MAMU@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Thomas",
+	"Wurst",
+	"m",
+	"WURT@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Bernhard",
+	"Loibner",
+	"m",
+	"LOIB@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Peter",
+	"Kovar",
+	"m",
+	"KOVA@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Sebastian",
+	"Braunsberger",
+	"m",
+	"BRAU@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Lieselotte",
+	"Schmelz",
+	"f",
+	"SMEZ@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Sarina",
+	"Wareyka",
+	"f",
+	"WASA@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Monika",
+	"Bauer",
+	"f",
+	"BAUE@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Katrin",
+	"Vlcek",
+	"f",
+	"VLCK@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Michael",
+	"Putzenlechner",
+	"m",
+	"PULE@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Wilhelm",
+	"Frysak",
+	"m",
+	"FRYS@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Andreas",
+	"Haiker",
+	"m",
+	"HAIK@htl-donaustadt.at"
+);
+
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	email
+) VALUES (
+	"Hussain",
+	"Ibrahim",
+	"m",
+	"HAIK@htl-donaustadt.at"
+);
+
+
+
+
+
 INSERT INTO comments (name,message,dat,personid) 
 VALUES ("Test User","Very good profile!😍💕😘", "2023-04-04", (select personid from persons where lastname="Samarati" LIMIT 1));
 
 INSERT INTO comments (name,message,dat,personid) 
 VALUES ("Trashtalker","Huan 🤐🫠🫤😕😤", "2023-05-02", (select personid from persons where lastname="Samarati" LIMIT 1));
+
+
+
+
 
