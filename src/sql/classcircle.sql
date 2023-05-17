@@ -9,8 +9,8 @@ CREATE DATABASE IF NOT EXISTS classcircle
 
 USE classcircle;
 
-CREATE TABLE IF NOT EXISTS students(
-	studentid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS persons (
+	personid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
 	forename VARCHAR(40) NOT NULL,
 	lastname VARCHAR(40) NOT NULL,
 	gender VARCHAR(20) NOT NULL,
@@ -45,11 +45,11 @@ CREATE TABLE IF NOT EXISTS comments(
 	message VARCHAR(500) NOT NULL,
 	dat DATE NOT NULL,
 	studentid INTEGER UNSIGNED NOT NULL,
-	CONSTRAINT FOREIGN KEY(studentid) REFERENCES students(studentid),
+	CONSTRAINT FOREIGN KEY(studentid) REFERENCES person(personid),
 	CONSTRAINT PRIMARY KEY(commentid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -83,7 +83,7 @@ INSERT INTO students (
 	"190282@studierende.htl-donaustadt.at",
 	"1",
 	"tarik_akpinar.png",
-	"17%",
+	"100%",
 	"eine andere Farbe",
 	"Nichts davon",
 	"Habe viele",
@@ -103,7 +103,7 @@ INSERT INTO students (
 	"Instagram: 2tarik0"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -157,7 +157,7 @@ INSERT INTO students (
 	"Instagram: tim.altmn | snapchat: lol_txm"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -211,7 +211,7 @@ INSERT INTO students (
 	"https://www.instagram.com/president_vladimir_putin/"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -265,7 +265,7 @@ INSERT INTO students (
 	"twitch.tv/GetOnMyLvLTV"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -317,7 +317,7 @@ INSERT INTO students (
 	"Insta: sblgn17"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -371,7 +371,7 @@ INSERT INTO students (
 	"noelgroiss - snap"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -425,7 +425,7 @@ INSERT INTO students (
 	"pornhub.com/johnnysins"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -473,7 +473,7 @@ INSERT INTO students (
 	"Klassendieb"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -521,7 +521,7 @@ INSERT INTO students (
 	"Mitschüler"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -573,7 +573,7 @@ INSERT INTO students (
 	"Nichts"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -627,7 +627,7 @@ INSERT INTO students (
 	"Instagram: nagi8237"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -675,7 +675,7 @@ INSERT INTO students (
 	"Klassenseele"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -729,7 +729,7 @@ INSERT INTO students (
 	"https://www.linkedin.com/in/philipp-lueger/"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -777,7 +777,7 @@ INSERT INTO students (
 	"/"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -831,7 +831,7 @@ INSERT INTO students (
 	"Insta: lukas._.r6"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -883,7 +883,7 @@ INSERT INTO students (
 	"NPC"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -935,7 +935,7 @@ INSERT INTO students (
 	"https://www.instagram.com/alexx_p01/ Snap: axp_thereal"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -987,7 +987,7 @@ INSERT INTO students (
 	"Immer Anwesend (ich bin ein sklave meiner disziplin)"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -1039,7 +1039,7 @@ INSERT INTO students (
 	"Klassenteddy"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -1085,7 +1085,7 @@ INSERT INTO students (
 	"NMS",
 	"🥑",
 	"ITP2",
-	"#00fced",
+	"#2986cc",
 	"Windows-Phone",
 	"Palatschinken/Блины",
 	"Serie: Violet Evergarden - Film: Der gezähmte Widerspenstige",
@@ -1093,7 +1093,7 @@ INSERT INTO students (
 	"https://github.com/MichaelSamarati"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -1132,10 +1132,10 @@ INSERT INTO students (
 	"SEW",
 	"#000000",
 	"Android",
-	"github.com/ViktorTrojan"
+	"github.com/ViktorTrojan/"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -1187,7 +1187,7 @@ INSERT INTO students (
 	"Phantom (der Klasse) & Repetent (der Klügere) & Gründervater der V-Mann-Gang"
 );
 
-INSERT INTO students (
+INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
@@ -1242,78 +1242,9 @@ INSERT INTO students (
 );
 
 
-
-
+INSERT INTO comments (name,message,dat,studentid) 
+VALUES ("Test User","Very good profile!😍💕😘", "2023-04-04", (select personsid from persons where lastname="Samarati" LIMIT 1));
 
 INSERT INTO comments (name,message,dat,studentid) 
-VALUES ("Test User","Very good profile!😍💕😘", "2023-04-04", (select studentid from students where lastname="Samarati" LIMIT 1));
-
-INSERT INTO comments (name,message,dat,studentid) 
-VALUES ("Trashtalker","Huan 🤐🫠🫤😕😤", "2023-05-02", (select studentid from students where lastname="Samarati" LIMIT 1));
-
--- INSERT INTO students (
--- 	forename,
--- 	lastname,
--- 	birthday,
--- 	email,
--- 	siblings,
--- 	imageName,
--- 	visionScore,
--- 	eyeColor,
--- 	piercingTattoos,
--- 	favouriteSong,
--- 	chickenCrossReason,
--- 	quote,
--- 	hobbies,
--- 	pets,
--- 	allergies,
---   schoolBeforeHTL,
--- 	burgerPizzaAvocado,
--- 	favouriteSubject,
--- 	favouriteColor,
--- 	phone,
--- 	favouriteFood,
--- 	favouriteMedia,
--- 	specialClassFunction,
--- 	socialmedia
--- ) VALUES (
--- 	"Vorname",
--- 	"Nachname",
--- 	"2005-06-03",
--- 	"aaaaaa@studierende.htl-donaustadt.at",
--- 	"Geschwisteranzahl",
--- 	"vorname_nachname.png",
--- 	"SichtProzent",
--- 	"Augenfarbe Braun eine andere Farbe",
--- 	"piercingTattoos Nichts davon",
--- 	"Song",
--- 	"huhn",
--- 	"zitat",
--- 	"hobbies",
--- 	"pets Keine",
--- 	"allergies Keine",
--- 	"schuledavor",
--- 	"🍔🍕🥑",
--- 	"Fach",
--- 	"#000000",
--- 	"Phone",
--- 	"Lienlingsessen",
--- 	"SerienFilm",
--- 	"FunktionKlasse",
--- 	"socialmedia"
--- );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+VALUES ("Trashtalker","Huan 🤐🫠🫤😕😤", "2023-05-02", (select personsid from persons where lastname="Samarati" LIMIT 1));
 

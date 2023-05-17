@@ -33,39 +33,27 @@ io.on("connection", (socket) => {
   socket.on("students", async (data) => {
     console.log("students requested!");
     try {
-      const students = await db.query(
-        "select * from students order by lastname"
+      const persons = await db.query(
+        "select * from persons order by lastname"
       );
       console.log("students fetched from database!");
-      for (const student of students) {
-        let studentWithImage = await exchangeImagenameWithImage(
-          student,
+      for (const person of persons) {
+        let personWithImage = await exchangeImagenameWithImage(
+          person,
           imagesMap
         );
-        socket.emit("students_success", studentWithImage);
+        socket.emit("students_success", personWithImage);
       }
       console.log("students process finished!");
     } catch (e) {
       socket.emit("students_failure", "Error occured!");
     }
   });
-  // socket.on("student", async (data) => {
-  //   try {
-  //     const res = await db.query(
-  //       "select * from students where studentid = " + data.id
-  //     );
-  //     const student = res[0];
-  //     const normalizedStudent = await exchangeImagenameWithImage(student);
-  //     socket.emit("student_success", normalizedStudent);
-  //   } catch (e) {
-  //     socket.emit("student_failure", "Error occured!");
-  //   }
-  // });
   socket.on("comments", async (data) => {
     try {
-      const studentid = data.id;
+      const personid = data.id;
       const comments = await db.query(
-        "select * from comments where comments.studentid=" + studentid
+        "select * from comments where comments.personid=" + personid
       );
       socket.emit("comments_success", comments);
     } catch (e) {
@@ -76,17 +64,17 @@ io.on("connection", (socket) => {
     try {
       const name = data.name;
       const message = data.message;
-      const studentid = data.studentid;
+      const personid = data.personid;
       var dat = new Date(data.dat).toISOString().slice(0, 10).replace(/-/g, "");
       await db.query(
-        "insert into comments (name, message, dat, studentid) values ('" +
+        "insert into comments (name, message, dat, personid) values ('" +
           name +
           "', '" +
           message +
           "', '" +
           dat +
           "'," +
-          studentid +
+          personid +
           ")"
       );
       socket.emit("comments_insert_success", "Success!");

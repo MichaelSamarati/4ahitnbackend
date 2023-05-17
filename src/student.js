@@ -1,9 +1,9 @@
-async function exchangeImagenameWithImage(student, imagesMap) {
+async function exchangeImagenameWithImage(person, imagesMap) {
   try {
-    student.image = imagesMap.get(student.imageName);
-    delete student.imageName;
+    person.image = imagesMap.get(person.imageName);
+    delete person.imageName;
   } catch (e) {}
-  return student;
+  return person;
 }
 
 module.exports = {
