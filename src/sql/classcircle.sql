@@ -1309,6 +1309,7 @@ INSERT INTO persons (
 	personRole,
 	birthday,
 	email,
+	imageName,
 	subjects,
 	holidayDream,
 	formerJobs,
@@ -1326,6 +1327,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"1991-09-13",
 	"SCHI@htl-donaustadt.at",
+	"default.jpg",
 	"Mathematik, Ethik, SOPK",
 	"Pizza essen in Neapel",
 	"Buchhalterin (Schwerpunkt Steuern)",
@@ -1344,6 +1346,7 @@ INSERT INTO persons (
 	gender,
 	personRole,
 	email,
+	imageName,
 	subjects,
 	favouriteSubject,
 	schoolFromYouth,
@@ -1362,6 +1365,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"ZIVK@htl-donaustadt.at",
+	"default.jpg",
 	"SEW, NWT, MEDT",
 	"Netzwerktechnik - Security Bereich",
 	"HTL Donaustadt",
@@ -1383,6 +1387,7 @@ INSERT INTO persons (
 	personRole,
 	age,
 	email,
+	imageName,
 	subjects,
 	holidayDream,
 	schoolFromYouth,
@@ -1399,6 +1404,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"42",
 	"LANG@htl-donaustadt.at",
+	"default.jpg",
 	"AM, NWT (Kryptografie)",
 	"Mischung aus Entspannung und Erkundung von Neuem, draußen sein",
 	"Gymnasium in Deutschland",
@@ -1417,6 +1423,7 @@ INSERT INTO persons (
 	personRole,
 	age,
 	email,
+	imageName,
 	subjects,
 	favouriteSubject,
 	schoolFromYouth,
@@ -1435,6 +1442,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"43",
 	"ANGE@htl-donaustadt.at",
+	"default.jpg",
 	"NWT1, ITP2 (DA-Betreuung)",
 	"NWT1",
 	"VS, AHS (Unterstufe), HTL, FH",
@@ -1455,6 +1463,7 @@ INSERT INTO persons (
 	personRole,
 	age,
 	email,
+	imageName,
 	subjects,
 	holidayDream,
 	schoolFromYouth,
@@ -1474,6 +1483,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"54",
 	"SPAC@htl-donaustadt.at",
+	"default.jpg",
 	"SEW, NWT, LA1, KSN, ITP2",
 	"Entspannen, ein bisschen Sport, ein bisschen Kultur",
 	"Unterstufe BRG, dann HTL Elektrotechnik",
@@ -1495,6 +1505,7 @@ INSERT INTO persons (
 	personRole,
 	age,
 	email,
+	imageName,
 	subjects,
 	favouriteSubject,
 	holidayDream,
@@ -1517,6 +1528,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"58",
 	"HIES@htl-donaustadt.at",
+	"default.jpg",
 	"ITP2, SEW, INSY",
 	"Kann mich nicht entscheiden!",
 	"Möglichst weit weg fremde Länder/Kulturen erkunden",
@@ -1539,13 +1551,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Merisa",
 	"Mesanovic",
 	"f",
 	"Lehrer",
-	"MESA@htl-donaustadt.at"
+	"MESA@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1553,13 +1567,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Walter",
 	"Mantl-Mussak",
 	"m",
 	"Lehrer",
-	"MAMU@htl-donaustadt.at"
+	"MAMU@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1567,13 +1583,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Thomas",
 	"Wurst",
 	"m",
 	"Lehrer",
-	"WURT@htl-donaustadt.at"
+	"WURT@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1581,13 +1599,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Bernhard",
 	"Loibner",
 	"m",
 	"Lehrer",
-	"LOIB@htl-donaustadt.at"
+	"LOIB@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1595,13 +1615,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Peter",
 	"Kovar",
 	"m",
 	"Lehrer",
-	"KOVA@htl-donaustadt.at"
+	"KOVA@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1609,13 +1631,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Sebastian",
 	"Braunsberger",
 	"m",
 	"Lehrer",
-	"BRAU@htl-donaustadt.at"
+	"BRAU@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1623,13 +1647,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Lieselotte",
 	"Schmelz",
 	"f",
 	"Lehrer",
-	"SMEZ@htl-donaustadt.at"
+	"SMEZ@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1637,13 +1663,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Sarina",
 	"Wareyka",
 	"f",
 	"Lehrer",
-	"WASA@htl-donaustadt.at"
+	"WASA@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1651,13 +1679,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Monika",
 	"Bauer",
 	"f",
 	"Lehrer",
-	"BAUE@htl-donaustadt.at"
+	"BAUE@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1665,13 +1695,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Katrin",
 	"Vlcek",
 	"f",
 	"Lehrer",
-	"VLCK@htl-donaustadt.at"
+	"VLCK@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1679,13 +1711,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Michael",
 	"Putzenlechner",
 	"m",
 	"Lehrer",
-	"PULE@htl-donaustadt.at"
+	"PULE@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1693,13 +1727,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Wilhelm",
 	"Frysak",
 	"m",
 	"Lehrer",
-	"FRYS@htl-donaustadt.at"
+	"FRYS@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1707,13 +1743,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Andreas",
 	"Haiker",
 	"m",
 	"Lehrer",
-	"HAIK@htl-donaustadt.at"
+	"HAIK@htl-donaustadt.at",
+	"default.jpg"
 );
 
 INSERT INTO persons (
@@ -1721,13 +1759,15 @@ INSERT INTO persons (
 	lastname,
 	gender,
 	personRole,
-	email
+	email,
+	imageName
 ) VALUES (
 	"Hussain",
 	"Ibrahim",
 	"m",
 	"Lehrer",
-	"HAIK@htl-donaustadt.at"
+	"HAIK@htl-donaustadt.at",
+	"default.jpg"
 );
 
 
