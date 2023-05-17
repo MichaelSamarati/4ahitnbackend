@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 
 const db = require("./db");
-const { exchangeImagenameWithImage } = require("./student");
+const { exchangeImagenameWithImage } = require("./person");
 
 app.use(cors());
 
@@ -30,23 +30,21 @@ io.on("connection", (socket) => {
   socket.on("test", (msg) => {
     console.log(msg);
   });
-  socket.on("students", async (data) => {
-    console.log("students requested!");
+  socket.on("persons", async (data) => {
+    console.log("persons requested!");
     try {
-      const persons = await db.query(
-        "select * from persons order by lastname"
-      );
-      console.log("students fetched from database!");
+      const persons = await db.query("select * from persons order by lastname");
+      console.log("persons fetched from database!");
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
           person,
           imagesMap
         );
-        socket.emit("students_success", personWithImage);
+        socket.emit("persons_success", personWithImage);
       }
-      console.log("students process finished!");
+      console.log("persons process finished!");
     } catch (e) {
-      socket.emit("students_failure", "Error occured!");
+      socket.emit("persons_failure", "Error occured!");
     }
   });
   socket.on("comments", async (data) => {
@@ -93,7 +91,7 @@ server.listen(PORT, () => {
 async function readImageFiles() {
   try {
     const imageNames = await db.query(
-      "select imageName from students order by lastname"
+      "select imageName from persons order by lastname"
     );
     await Promise.all(
       imageNames.map(async (x) => {
