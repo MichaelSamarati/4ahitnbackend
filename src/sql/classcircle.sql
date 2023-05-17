@@ -13,8 +13,9 @@ CREATE TABLE IF NOT EXISTS persons (
 	forename VARCHAR(40) NOT NULL,
 	lastname VARCHAR(40) NOT NULL,
 	gender VARCHAR(20) NOT NULL,
+	personRole VARCHAR(40) NOT NULL,
 	birthday DATE,
-	age VARCHAR(30	),
+	age VARCHAR(30),
 	email VARCHAR(100) NOT NULL,
 	siblings VARCHAR(100),
 	imageName VARCHAR(256),
@@ -61,6 +62,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -87,6 +89,7 @@ INSERT INTO persons (
 	"Tarik",
 	"Akpinar",
 	"m",
+	"Schüler",
 	"2004-10-04",
 	"190282@studierende.htl-donaustadt.at",
 	"1",
@@ -115,6 +118,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -141,6 +145,7 @@ INSERT INTO persons (
 	"Tim",
 	"Altmann",
 	"m",
+	"Schüler",
 	"2004-06-10",
 	"180185@studierende.htl-donaustadt.at",
 	"0",
@@ -169,6 +174,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -195,6 +201,7 @@ INSERT INTO persons (
 	"Hatiǆa",
 	"Begagić",
 	"f",
+	"Schüler",
 	"2003-01-21",
 	"210431@studierende.htl-donaustadt.at",
 	"1",
@@ -223,6 +230,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -249,6 +257,7 @@ INSERT INTO persons (
 	"Josip",
 	"Benkovic",
 	"m",
+	"Schüler",
 	"2004-06-09",
 	"190199@studierende.htl-donaustadt.at",
 	"0",
@@ -277,6 +286,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -302,6 +312,7 @@ INSERT INTO persons (
 	"Salih",
 	"Bilgin",
 	"m",
+	"Schüler",
 	"2005-11-17",
 	"190252@studierende.htl-donaustadt.at",
 	"3",
@@ -329,6 +340,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -355,6 +367,7 @@ INSERT INTO persons (
 	"Zerda",
 	"Cakir",
 	"f",
+	"Schüler",
 	"2005-05-03",
 	"190251@studierende.htl-donaustadt.at",
 	"2",
@@ -383,6 +396,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -409,6 +423,7 @@ INSERT INTO persons (
 	"Michael",
 	"Falk",
 	"m",
+	"Schüler",
 	"2004-10-23",
 	"190197@studierende.htl-donaustadt.at",
 	"2",
@@ -437,6 +452,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -460,6 +476,7 @@ INSERT INTO persons (
 	"Roberto",
 	"Ghiriti",
 	"m",
+	"Schüler",
 	"2005-04-13",
 	"190226@studierende.htl-donaustadt.at",
 	"0",
@@ -485,6 +502,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -508,6 +526,7 @@ INSERT INTO persons (
 	"Noel",
 	"Groiß",
 	"m",
+	"Schüler",
 	"2004-08-01",
 	"190205@studierende.htl-donaustadt.at",
 	"1",
@@ -533,6 +552,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -558,6 +578,7 @@ INSERT INTO persons (
 	"Florian",
 	"Hedrich",
 	"m",
+	"Schüler",
 	"2003-06-11",
 	"190181@studierende.htl-donaustadt.at",
 	"0",
@@ -585,6 +606,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -611,6 +633,7 @@ INSERT INTO persons (
 	"Nagi",
 	"Ibrahim",
 	"m",
+	"Schüler",
 	"2004-03-30",
 	"190296@studierende.htl-donaustadt.at",
 	"1",
@@ -639,6 +662,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -662,6 +686,7 @@ INSERT INTO persons (
 	"Taisir",
 	"Khalifa",
 	"f",
+	"Schüler",
 	"2004-12-12",
 	"190315@studierende.htl-donaustadt.at",
 	"halt kein Einzelkind",
@@ -687,6 +712,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -713,6 +739,7 @@ INSERT INTO persons (
 	"Philipp",
 	"Lueger",
 	"m",
+	"Schüler",
 	"2005-01-21",
 	"190189@studierende.htl-donaustadt.at",
 	"1",
@@ -741,6 +768,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -764,6 +792,7 @@ INSERT INTO persons (
 	"Alexander",
 	"Mayerhofer",
 	"m",
+	"Schüler",
 	"2003-08-03",
 	"160502@studierende.htl-donaustadt.at",
 	"4",
@@ -789,6 +818,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -815,6 +845,7 @@ INSERT INTO persons (
 	"Lukas",
 	"Milicic",
 	"m",
+	"Schüler",
 	"2005-04-27",
 	"190312@studierende.htl-donaustadt.at",
 	"2",
@@ -843,6 +874,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -868,6 +900,7 @@ INSERT INTO persons (
 	"Stefan",
 	"Milojkovic",
 	"m",
+	"Schüler",
 	"2005-04-01",
 	"190198@studierende.htl-donaustadt.at",
 	"4",
@@ -895,6 +928,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -920,6 +954,7 @@ INSERT INTO persons (
 	"Alexander",
 	"Pauer",
 	"m",
+	"Schüler",
 	"2005-04-06",
 	"190202@studierende.htl-donaustadt.at",
 	"2",
@@ -947,6 +982,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -972,6 +1008,7 @@ INSERT INTO persons (
 	"Luka",
 	"Ramljak",
 	"m",
+	"Schüler",
 	"2005-01-06",
 	"190187@studierende.htl-donaustadt.at",
 	"2",
@@ -999,6 +1036,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -1024,6 +1062,7 @@ INSERT INTO persons (
 	"Umut",
 	"Sakar",
 	"m",
+	"Schüler",
 	"2003-02-21",
 	"180191@studierende.htl-donaustadt.at",
 	"1",
@@ -1051,6 +1090,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -1077,6 +1117,7 @@ INSERT INTO persons (
 	"Michael",
 	"Samarati",
 	"m",
+	"Schüler",
 	"2005-06-03",
 	"190182@studierende.htl-donaustadt.at",
 	"6",
@@ -1105,6 +1146,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -1125,6 +1167,7 @@ INSERT INTO persons (
 	"Viktor",
 	"Trojan",
 	"m",
+	"Schüler",
 	"2003-05-11",
 	"190191@studierende.htl-donaustadt.at",
 	"1",
@@ -1147,6 +1190,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -1172,6 +1216,7 @@ INSERT INTO persons (
 	"Philipp",
 	"Vollmann",
 	"m",
+	"Schüler",
 	"2004-02-11",
 	"180194@studierende.htl-donaustadt.at",
 	"0",
@@ -1199,6 +1244,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	siblings,
@@ -1225,6 +1271,7 @@ INSERT INTO persons (
 	"Linda",
 	"Yusupova",
 	"f",
+	"Schüler",
 	"2003-12-31",
 	"190222@studierende.htl-donaustadt.at",
 	"3",
@@ -1259,6 +1306,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	birthday,
 	email,
 	subjects,
@@ -1275,6 +1323,7 @@ INSERT INTO persons (
 	"Veronika",
 	"Schippani-Stockinger",
 	"f",
+	"Lehrer",
 	"1991-09-13",
 	"SCHI@htl-donaustadt.at",
 	"Mathematik, Ethik, SOPK",
@@ -1293,6 +1342,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email,
 	subjects,
 	favouriteSubject,
@@ -1310,6 +1360,7 @@ INSERT INTO persons (
 	"Patrick",
 	"Zivkovic",
 	"m",
+	"Lehrer",
 	"ZIVK@htl-donaustadt.at",
 	"SEW, NWT, MEDT",
 	"Netzwerktechnik - Security Bereich",
@@ -1329,6 +1380,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	age,
 	email,
 	subjects,
@@ -1344,6 +1396,7 @@ INSERT INTO persons (
 	"Lucie",
 	"Langer",
 	"f",
+	"Lehrer",
 	"42",
 	"LANG@htl-donaustadt.at",
 	"AM, NWT (Kryptografie)",
@@ -1361,6 +1414,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	age,
 	email,
 	subjects,
@@ -1378,6 +1432,7 @@ INSERT INTO persons (
 	"Thomas",
 	"Angermayer",
 	"m",
+	"Lehrer",
 	"43",
 	"ANGE@htl-donaustadt.at",
 	"NWT1, ITP2 (DA-Betreuung)",
@@ -1397,6 +1452,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	age,
 	email,
 	subjects,
@@ -1415,6 +1471,7 @@ INSERT INTO persons (
 	"Thomas",
 	"Spachinger",
 	"m",
+	"Lehrer",
 	"54",
 	"SPAC@htl-donaustadt.at",
 	"SEW, NWT, LA1, KSN, ITP2",
@@ -1435,6 +1492,7 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	age,
 	email,
 	subjects,
@@ -1456,6 +1514,7 @@ INSERT INTO persons (
 	"Martina",
 	"Hiesinger",
 	"f",
+	"Lehrer",
 	"58",
 	"HIES@htl-donaustadt.at",
 	"ITP2, SEW, INSY",
@@ -1479,11 +1538,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Merisa",
 	"Mesanovic",
 	"f",
+	"Lehrer",
 	"MESA@htl-donaustadt.at"
 );
 
@@ -1491,11 +1552,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Walter",
 	"Mantl-Mussak",
 	"m",
+	"Lehrer",
 	"MAMU@htl-donaustadt.at"
 );
 
@@ -1503,11 +1566,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Thomas",
 	"Wurst",
 	"m",
+	"Lehrer",
 	"WURT@htl-donaustadt.at"
 );
 
@@ -1515,11 +1580,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Bernhard",
 	"Loibner",
 	"m",
+	"Lehrer",
 	"LOIB@htl-donaustadt.at"
 );
 
@@ -1527,11 +1594,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Peter",
 	"Kovar",
 	"m",
+	"Lehrer",
 	"KOVA@htl-donaustadt.at"
 );
 
@@ -1539,11 +1608,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Sebastian",
 	"Braunsberger",
 	"m",
+	"Lehrer",
 	"BRAU@htl-donaustadt.at"
 );
 
@@ -1551,11 +1622,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Lieselotte",
 	"Schmelz",
 	"f",
+	"Lehrer",
 	"SMEZ@htl-donaustadt.at"
 );
 
@@ -1563,11 +1636,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Sarina",
 	"Wareyka",
 	"f",
+	"Lehrer",
 	"WASA@htl-donaustadt.at"
 );
 
@@ -1575,11 +1650,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Monika",
 	"Bauer",
 	"f",
+	"Lehrer",
 	"BAUE@htl-donaustadt.at"
 );
 
@@ -1587,11 +1664,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Katrin",
 	"Vlcek",
 	"f",
+	"Lehrer",
 	"VLCK@htl-donaustadt.at"
 );
 
@@ -1599,11 +1678,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Michael",
 	"Putzenlechner",
 	"m",
+	"Lehrer",
 	"PULE@htl-donaustadt.at"
 );
 
@@ -1611,11 +1692,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Wilhelm",
 	"Frysak",
 	"m",
+	"Lehrer",
 	"FRYS@htl-donaustadt.at"
 );
 
@@ -1623,11 +1706,13 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Andreas",
 	"Haiker",
 	"m",
+	"Lehrer",
 	"HAIK@htl-donaustadt.at"
 );
 
@@ -1635,14 +1720,15 @@ INSERT INTO persons (
 	forename,
 	lastname,
 	gender,
+	personRole,
 	email
 ) VALUES (
 	"Hussain",
 	"Ibrahim",
 	"m",
+	"Lehrer",
 	"HAIK@htl-donaustadt.at"
 );
-
 
 
 
