@@ -435,7 +435,6 @@ INSERT INTO students (
 	imageName,
 	eyeColor,
 	piercingTattoos,
-	favouriteSong,
 	chickenCrossReason,
 	quote,
 	hobbies,
@@ -448,8 +447,7 @@ INSERT INTO students (
 	phone,
 	favouriteFood,
 	favouriteMedia,
-	specialClassFunction,
-	socialmedia
+	specialClassFunction
 ) VALUES (
 	"Roberto",
 	"Ghiriti",
@@ -460,7 +458,6 @@ INSERT INTO students (
 	"roberto_ghiriti.jpg",
 	"eine andere Farbe",
 	"Nichts davon",
-	"Ni**as in Paris",
 	"Popcorn",
 	"Deine Geldbörse ist meine Geldbörse ",
 	"Klauen, GYM",
@@ -473,8 +470,55 @@ INSERT INTO students (
 	"Android",
 	"Katze",
 	"Bleach",
-	"Klassendieb",
-	"Nein"
+	"Klassendieb"
+);
+
+INSERT INTO students (
+	forename,
+	lastname,
+	gender,
+	birthday,
+	email,
+	siblings,
+	imageName,
+	eyeColor,
+	piercingTattoos,
+	chickenCrossReason,
+	quote,
+	hobbies,
+	pets,
+	allergies,
+  schoolBeforeHTL,
+	burgerPizzaAvocado,
+	favouriteSubject,
+	favouriteColor,
+	phone,
+	favouriteFood,
+	favouriteMedia,
+	specialClassFunction
+) VALUES (
+	"Noel",
+	"Groiß",
+	"m",
+	"2004-08-01",
+	"190205@studierende.htl-donaustadt.at",
+	"1",
+	"noel_groiss.jpg",
+	"eine andere Farbe",
+	"Nichts davon",
+	"To get to the other side",
+	"Keine Ahnung",
+	"Bissl Sport",
+	"Piercing",
+	"Tattoo",
+	"AHS",
+	"🍔",
+	"BSPK",
+	"#0b0be7",
+	"iOS",
+	"Burger",
+	"Breaking Bad",
+	"Mitschüler"
 );
 
 INSERT INTO students (
