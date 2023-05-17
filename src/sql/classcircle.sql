@@ -503,7 +503,7 @@ INSERT INTO students (
 	"2004-08-01",
 	"190205@studierende.htl-donaustadt.at",
 	"1",
-	"noel_groiss.jpg",
+	"noel_groiss.png",
 	"eine andere Farbe",
 	"Nichts davon",
 	"To get to the other side",
