@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS persons (
 	favouriteMedia VARCHAR(300),
 	specialClassFunction VARCHAR(100),
 	socialmedia VARCHAR(200),
-	CONSTRAINT PRIMARY KEY(studentid)
+	CONSTRAINT PRIMARY KEY(personid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci; 
 
 CREATE TABLE IF NOT EXISTS comments(
@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS comments(
 	name VARCHAR(40) NOT NULL,
 	message VARCHAR(500) NOT NULL,
 	dat DATE NOT NULL,
-	studentid INTEGER UNSIGNED NOT NULL,
-	CONSTRAINT FOREIGN KEY(studentid) REFERENCES person(personid),
+	personid INTEGER UNSIGNED NOT NULL,
+	CONSTRAINT FOREIGN KEY(personid) REFERENCES person(personid),
 	CONSTRAINT PRIMARY KEY(commentid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -1242,9 +1242,9 @@ INSERT INTO persons (
 );
 
 
-INSERT INTO comments (name,message,dat,studentid) 
-VALUES ("Test User","Very good profile!😍💕😘", "2023-04-04", (select personsid from persons where lastname="Samarati" LIMIT 1));
+INSERT INTO comments (name,message,dat,personid) 
+VALUES ("Test User","Very good profile!😍💕😘", "2023-04-04", (select personid from persons where lastname="Samarati" LIMIT 1));
 
-INSERT INTO comments (name,message,dat,studentid) 
-VALUES ("Trashtalker","Huan 🤐🫠🫤😕😤", "2023-05-02", (select personsid from persons where lastname="Samarati" LIMIT 1));
+INSERT INTO comments (name,message,dat,personid) 
+VALUES ("Trashtalker","Huan 🤐🫠🫤😕😤", "2023-05-02", (select personid from persons where lastname="Samarati" LIMIT 1));
 
