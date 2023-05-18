@@ -44,23 +44,57 @@ io.on("connection", (socket) => {
   socket.on("test", (msg) => {
     console.log(msg);
   });
-  socket.on("persons", async (data) => {
-    console.log("persons requested!");
+  socket.on("students", async (data) => {
+    console.log("students requested!");
     try {
-      const persons = await db.query("select * from persons order by lastname");
-      console.log("persons fetched from database!");
+      const persons = await db.query("select * from persons where personRole='Schüler' order by lastname");
+      console.log("students fetched from database!");
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
           person,
           imagesMap
         );
-        socket.emit("persons_success", personWithImage);
+        socket.emit("students_success", personWithImage);
       }
-      console.log("persons process finished!");
+      console.log("students process finished!");
     } catch (e) {
-      socket.emit("persons_failure", "Error occured!");
+      socket.emit("students_failure", "Error occured!");
     }
   });
+  socket.on("teachers", async (data) => {
+    console.log("teachers requested!");
+    try {
+      const persons = await db.query("select * from persons where personRole='Lehrer' order by lastname");
+      console.log("teachers fetched from database!");
+      for (const person of persons) {
+        let personWithImage = await exchangeImagenameWithImage(
+          person,
+          imagesMap
+        );
+        socket.emit("teachers_success", personWithImage);
+      }
+      console.log("teachers process finished!");
+    } catch (e) {
+      socket.emit("teachers_failure", "Error occured!");
+    }
+  });
+  // socket.on("persons", async (data) => {
+  //   console.log("persons requested!");
+  //   try {
+  //     const persons = await db.query("select * from persons order by lastname");
+  //     console.log("persons fetched from database!");
+  //     for (const person of persons) {
+  //       let personWithImage = await exchangeImagenameWithImage(
+  //         person,
+  //         imagesMap
+  //       );
+  //       socket.emit("persons_success", personWithImage);
+  //     }
+  //     console.log("persons process finished!");
+  //   } catch (e) {
+  //     socket.emit("persons_failure", "Error occured!");
+  //   }
+  // });
   socket.on("comments", async (data) => {
     try {
       const personid = data.id;
@@ -123,7 +157,7 @@ async function readImageFiles() {
 function hello() {
   setInterval(() => {
     console.log(new Date());
-  }, 128000);
+  }, 300000);
 }
 
 hello();
