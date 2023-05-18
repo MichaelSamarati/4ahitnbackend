@@ -1325,7 +1325,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"1991-09-13",
 	"SCHI@htl-donaustadt.at",
-	"default.jpg",
+	"veronika_schippani.jpg",
 	"Mathematik, Ethik, SOPK",
 	"Pizza essen in Neapel",
 	"Buchhalterin (Schwerpunkt Steuern)",
@@ -1363,7 +1363,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"ZIVK@htl-donaustadt.at",
-	"default.jpg",
+	"patrick_zivkovic.jpg",
 	"SEW, NWT, MEDT",
 	"Netzwerktechnik - Security Bereich",
 	"HTL Donaustadt",
@@ -1481,7 +1481,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"54",
 	"SPAC@htl-donaustadt.at",
-	"default.jpg",
+	"thomas_spachinger.jpg",
 	"SEW, NWT, LA1, KSN, ITP2",
 	"Entspannen, ein bisschen Sport, ein bisschen Kultur",
 	"Unterstufe BRG, dann HTL Elektrotechnik",
@@ -1589,7 +1589,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"WURT@htl-donaustadt.at",
-	"default.jpg"
+	"thomas_wurst.jpg"
 );
 
 INSERT INTO persons (
@@ -1605,7 +1605,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"LOIB@htl-donaustadt.at",
-	"default.jpg"
+	"bernhard_loibner.jpg"
 );
 
 INSERT INTO persons (
@@ -1621,7 +1621,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"KOVA@htl-donaustadt.at",
-	"default.jpg"
+	"peter_kovar.jpg"
 );
 
 INSERT INTO persons (
@@ -1733,7 +1733,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"FRYS@htl-donaustadt.at",
-	"default.jpg"
+	"wilhelm_frysak.jpg"
 );
 
 INSERT INTO persons (
