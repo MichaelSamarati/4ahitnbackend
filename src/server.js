@@ -26,6 +26,20 @@ var imagesMap = new Map();
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
   console.log("New connection from " + clientIp);
+
+  socket.on("error", (err) => {
+    console.log("error: " + err.message);
+    console.log(err.stack);
+  });
+  socket.on("connect_error", (err) => {
+    console.log("connect_error: " + err.message);
+    console.log(err.stack);
+  });
+  socket.on("connect_failed", (err) => {
+    console.log("connect_failed: " + err.message);
+    console.log(err.stack);
+  });
+
   socket.on("disconnect", () => {});
   socket.on("test", (msg) => {
     console.log(msg);
