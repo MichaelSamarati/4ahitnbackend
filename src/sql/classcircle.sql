@@ -1160,7 +1160,6 @@ INSERT INTO persons (
   schoolBeforeHTL,
 	burgerPizzaAvocado,
 	favouriteSubject,
-	favouriteColor,
 	phone,
 	socialmedia
 ) VALUES (
@@ -1181,7 +1180,6 @@ INSERT INTO persons (
 	"AHS",
 	"🍕",
 	"SEW",
-	"#000000",
 	"Android",
 	"github.com/ViktorTrojan/"
 );
