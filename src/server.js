@@ -47,8 +47,11 @@ io.on("connection", (socket) => {
   socket.on("students", async (data) => {
     console.log("students requested!");
     try {
-      const persons = await db.query("select * from persons where personRole='Schüler' order by lastname");
+      const persons = await db.query(
+        "select * from persons where personRole='Schüler' order by lastname"
+      );
       console.log("students fetched from database!");
+      socket.emit("students_length", { length: persons.length });
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
           person,
@@ -64,8 +67,11 @@ io.on("connection", (socket) => {
   socket.on("teachers", async (data) => {
     console.log("teachers requested!");
     try {
-      const persons = await db.query("select * from persons where personRole='Lehrer' order by lastname");
+      const persons = await db.query(
+        "select * from persons where personRole='Lehrer' order by lastname"
+      );
       console.log("teachers fetched from database!");
+      socket.emit("teachers_length", { length: persons.length });
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
           person,
