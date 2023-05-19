@@ -84,23 +84,6 @@ io.on("connection", (socket) => {
       socket.emit("teachers_failure", "Error occured!");
     }
   });
-  // socket.on("persons", async (data) => {
-  //   console.log("persons requested!");
-  //   try {
-  //     const persons = await db.query("select * from persons order by lastname");
-  //     console.log("persons fetched from database!");
-  //     for (const person of persons) {
-  //       let personWithImage = await exchangeImagenameWithImage(
-  //         person,
-  //         imagesMap
-  //       );
-  //       socket.emit("persons_success", personWithImage);
-  //     }
-  //     console.log("persons process finished!");
-  //   } catch (e) {
-  //     socket.emit("persons_failure", "Error occured!");
-  //   }
-  // });
   socket.on("comments", async (data) => {
     try {
       const personid = data.id;
@@ -167,3 +150,10 @@ function hello() {
 }
 
 hello();
+
+
+process.on('uncaughtException', function (err) {
+  console.log("uncaughtException:")
+  console.error(err.stack);
+  console.log("Node NOT Exiting...");
+});
