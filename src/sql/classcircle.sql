@@ -1402,7 +1402,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"42",
 	"LANG@htl-donaustadt.at",
-	"default.jpg",
+	"lucie_langer.jpg",
 	"AM, NWT (Kryptografie)",
 	"Mischung aus Entspannung und Erkundung von Neuem, draußen sein",
 	"Gymnasium in Deutschland",
