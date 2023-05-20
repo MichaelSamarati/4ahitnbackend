@@ -1685,7 +1685,7 @@ INSERT INTO persons (
 	"f",
 	"Lehrer",
 	"BAUE@htl-donaustadt.at",
-	"default.jpg"
+	"monika_bauer.jpg"
 );
 
 INSERT INTO persons (
@@ -1735,39 +1735,6 @@ INSERT INTO persons (
 	"FRYS@htl-donaustadt.at",
 	"wilhelm_frysak.jpg"
 );
-
-INSERT INTO persons (
-	forename,
-	lastname,
-	gender,
-	personRole,
-	email,
-	imageName
-) VALUES (
-	"Andreas",
-	"Haiker",
-	"m",
-	"Lehrer",
-	"HAIK@htl-donaustadt.at",
-	"default.jpg"
-);
-
-INSERT INTO persons (
-	forename,
-	lastname,
-	gender,
-	personRole,
-	email,
-	imageName
-) VALUES (
-	"Hussain",
-	"Ibrahim",
-	"m",
-	"Lehrer",
-	"HAIK@htl-donaustadt.at",
-	"default.jpg"
-);
-
 
 
 
