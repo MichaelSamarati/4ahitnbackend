@@ -23,6 +23,15 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
+server.on("clientError", (err, socket) => {
+  console.log("clientError:");
+  console.log(err);
+  console.log("err.code: "+ err.code);
+  if (err.code === "ECONNRESET" || !socket.writable)
+    socket.end("HTTP/2 400 Bad Request\n");
+  console.log("client error\n", err);
+});
+
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
   console.log("New connection from " + clientIp);
@@ -61,8 +70,11 @@ io.on("connection", (socket) => {
       }
       console.log("students process finished!");
     } catch (e) {
-      socket.emit("students_failure", "Error occured!");
+      console.log("students_failure error 1");
+      // socket.emit("students_failure", "Error occured!");
+      console.log("students_failure error 2");
     }
+    console.log("students end");
   });
   socket.on("teachers", async (data) => {
     console.log("teachers requested!");
@@ -81,8 +93,11 @@ io.on("connection", (socket) => {
       }
       console.log("teachers process finished!");
     } catch (e) {
-      socket.emit("teachers_failure", "Error occured!");
+      console.log("teachers_failure error 1");
+      // socket.emit("teachers_failure", "Error occured!");
+      console.log("teachers_failure error 2");
     }
+    console.log("teachers end");
   });
   socket.on("comments", async (data) => {
     try {
@@ -151,9 +166,8 @@ function hello() {
 
 hello();
 
-
-process.on('uncaughtException', function (err) {
-  console.log("uncaughtException:")
+process.on("uncaughtException", function (err) {
+  console.log("uncaughtException:");
   console.error(err.stack);
   console.log("Node NOT Exiting...");
 });
