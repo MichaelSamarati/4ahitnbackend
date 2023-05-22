@@ -100,6 +100,8 @@ io.on("connection", (socket) => {
     console.log("teachers end");
   });
   socket.on("comments", async (data) => {
+    console.log("comments requested!");
+
     try {
       const personid = data.id;
       const comments = await db.query(
@@ -107,7 +109,9 @@ io.on("connection", (socket) => {
       );
       socket.emit("comments_success", comments);
     } catch (e) {
-      socket.emit("comments_failure", "Error occured!");
+      //socket.emit("comments_failure", "Error occured!");
+      console.log("comments_success");
+
     }
   });
   socket.on("comment_insert", async (data) => {
@@ -129,7 +133,9 @@ io.on("connection", (socket) => {
       );
       socket.emit("comments_insert_success", "Success!");
     } catch (e) {
-      socket.emit("comments_insert_failure", "Error occured!");
+      //socket.emit("comments_insert_failure", "Error occured!");
+      console.log("comments_insert_failure");
+
     }
   });
 });
