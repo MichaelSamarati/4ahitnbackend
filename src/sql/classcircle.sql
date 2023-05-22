@@ -1637,7 +1637,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"BRAU@htl-donaustadt.at",
-	"default.jpg"
+	"sebastian_braunsberger.jpg"
 );
 
 INSERT INTO persons (
