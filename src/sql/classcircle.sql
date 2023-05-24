@@ -1066,7 +1066,7 @@ INSERT INTO persons (
 	"2003-02-21",
 	"180191@studierende.htl-donaustadt.at",
 	"1",
-	"umut_sakar.jpg",
+	"umut_sakar.gif",
 	"100%",
 	"Braun",
 	"Nichts davon",
