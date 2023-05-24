@@ -27,15 +27,19 @@ server.on("clientError", (err, socket) => {
   console.log("clientError:");
   console.log(err);
   console.log("err.code: "+ err.code);
-  if (err.code === "ECONNRESET" || !socket.writable)
-    socket.end("HTTP/2 400 Bad Request\n");
+  // if (err.code === "ECONNRESET" || !socket.writable)
+  //   socket.end("HTTP/2 400 Bad Request\n");
+  socket.end("Error occured! clientError");
   console.log("client error\n", err);
 });
 
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
   console.log("New connection from " + clientIp);
-
+  socket.on('close', function(exception) {
+    console.log('SOCKET CLOSED');
+  })
+  
   socket.on("error", (err) => {
     console.log("error: " + err.message);
     console.log(err.stack);
