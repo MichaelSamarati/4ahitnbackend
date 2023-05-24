@@ -93,7 +93,7 @@ INSERT INTO persons (
 	"2004-10-04",
 	"190282@studierende.htl-donaustadt.at",
 	"1",
-	"tarik_akpinar.png",
+	"tarik_akpinar.webp",
 	"100%",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -149,7 +149,7 @@ INSERT INTO persons (
 	"2004-06-10",
 	"180185@studierende.htl-donaustadt.at",
 	"0",
-	"tim_altmann.png",
+	"tim_altmann.webp",
 	"17%",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -205,7 +205,7 @@ INSERT INTO persons (
 	"2003-01-21",
 	"210431@studierende.htl-donaustadt.at",
 	"1",
-	"hatidza_begagic.png",
+	"hatidza_begagic.webp",
 	"100%",
 	"eine andere Farbe",
 	"Tattoo und Piercing",
@@ -261,7 +261,7 @@ INSERT INTO persons (
 	"2004-06-09",
 	"190199@studierende.htl-donaustadt.at",
 	"0",
-	"josip_benkovic.png",
+	"josip_benkovic.webp",
 	"94%",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -316,7 +316,7 @@ INSERT INTO persons (
 	"2004-11-17",
 	"190252@studierende.htl-donaustadt.at",
 	"3",
-	"salih_bilgin.jpg",
+	"salih_bilgin.webp",
 	"44%",
 	"braun",
 	"Nichts davon",
@@ -371,7 +371,7 @@ INSERT INTO persons (
 	"2005-05-03",
 	"190251@studierende.htl-donaustadt.at",
 	"2",
-	"zerda_cakir.jpg",
+	"zerda_cakir.webp",
 	"94%",
 	"Braun",
 	"Piercing",
@@ -427,7 +427,7 @@ INSERT INTO persons (
 	"2004-10-23",
 	"190197@studierende.htl-donaustadt.at",
 	"2",
-	"michael_falk.jpg",
+	"michael_falk.webp",
 	"Nicht Farbenblind",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -480,7 +480,7 @@ INSERT INTO persons (
 	"2005-04-13",
 	"190226@studierende.htl-donaustadt.at",
 	"0",
-	"roberto_ghiriti.jpg",
+	"roberto_ghiriti.webp",
 	"eine andere Farbe",
 	"Nichts davon",
 	"Popcorn",
@@ -530,7 +530,7 @@ INSERT INTO persons (
 	"2004-08-01",
 	"190205@studierende.htl-donaustadt.at",
 	"1",
-	"noel_groiss.png",
+	"noel_groiss.webp",
 	"eine andere Farbe",
 	"Nichts davon",
 	"To get to the other side",
@@ -582,7 +582,7 @@ INSERT INTO persons (
 	"2003-06-11",
 	"190181@studierende.htl-donaustadt.at",
 	"0",
-	"florian_hedrich.png",
+	"florian_hedrich.webp",
 	"100%",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -637,7 +637,7 @@ INSERT INTO persons (
 	"2004-03-30",
 	"190296@studierende.htl-donaustadt.at",
 	"1",
-	"nagi_ibrahim.jpg",
+	"nagi_ibrahim.webp",
 	"50%",
 	"Braun",
 	"Nichts davon",
@@ -690,7 +690,7 @@ INSERT INTO persons (
 	"2004-12-12",
 	"190315@studierende.htl-donaustadt.at",
 	"halt kein Einzelkind",
-	"taisir_khalifa.png",
+	"taisir_khalifa.webp",
 	"94%",
 	"braun",
 	"Nichts davon",
@@ -743,7 +743,7 @@ INSERT INTO persons (
 	"2005-01-21",
 	"190189@studierende.htl-donaustadt.at",
 	"1",
-	"philipp_lueger.jpg",
+	"philipp_lueger.webp",
 	"100%",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -796,7 +796,7 @@ INSERT INTO persons (
 	"2003-08-03",
 	"160502@studierende.htl-donaustadt.at",
 	"4",
-	"alexander_mayerhofer.jpg",
+	"alexander_mayerhofer.webp",
 	"100%",
 	"Braun",
 	"Nichts davon",
@@ -849,7 +849,7 @@ INSERT INTO persons (
 	"2005-04-27",
 	"190312@studierende.htl-donaustadt.at",
 	"2",
-	"lukas_milicic.png",
+	"lukas_milicic.webp",
 	"Ich bin blind. kys\nHoffentlich schlaft ihr gut",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -904,7 +904,7 @@ INSERT INTO persons (
 	"2005-04-01",
 	"190198@studierende.htl-donaustadt.at",
 	"4",
-	"stefan_milojkovic.jpg",
+	"stefan_milojkovic.webp",
 	"100%",
 	"Braun",
 	"Nichts davon",
@@ -958,7 +958,7 @@ INSERT INTO persons (
 	"2005-04-06",
 	"190202@studierende.htl-donaustadt.at",
 	"2",
-	"alexander_pauer.jpg",
+	"alexander_pauer.webp",
 	"100%",
 	"Braun",
 	"Nichts davon",
@@ -1012,7 +1012,7 @@ INSERT INTO persons (
 	"2005-01-06",
 	"190187@studierende.htl-donaustadt.at",
 	"2",
-	"luka_ramljak.png",
+	"luka_ramljak.webp",
 	"100%",
 	"braun",
 	"Nichts davon",
@@ -1066,7 +1066,7 @@ INSERT INTO persons (
 	"2003-02-21",
 	"180191@studierende.htl-donaustadt.at",
 	"1",
-	"umut_sakar.gif",
+	"umut_sakar.webp",
 	"100%",
 	"Braun",
 	"Nichts davon",
@@ -1121,7 +1121,7 @@ INSERT INTO persons (
 	"2005-06-03",
 	"190182@studierende.htl-donaustadt.at",
 	"6",
-	"michael_samarati.jpg",
+	"michael_samarati.webp",
 	"100%",
 	"eine andere Farbe",
 	"Nichts davon",
@@ -1170,7 +1170,7 @@ INSERT INTO persons (
 	"2003-05-11",
 	"190191@studierende.htl-donaustadt.at",
 	"1",
-	"viktor_trojan.png",
+	"viktor_trojan.webp",
 	"Braun",
 	"Nichts davon",
 	"Atemlos",
@@ -1218,7 +1218,7 @@ INSERT INTO persons (
 	"2004-02-11",
 	"180194@studierende.htl-donaustadt.at",
 	"0",
-	"philipp_vollmann.jpg",
+	"philipp_vollmann.webp",
 	"100%",
 	"braun",
 	"Nichts davon",
@@ -1273,7 +1273,7 @@ INSERT INTO persons (
 	"2003-12-31",
 	"190222@studierende.htl-donaustadt.at",
 	"3",
-	"linda_yusupova.jpg",
+	"linda_yusupova.webp",
 	"100%",
 	"Braun",
 	"Nichts davon",
@@ -1325,7 +1325,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"1991-09-13",
 	"SCHI@htl-donaustadt.at",
-	"veronika_schippani.jpg",
+	"veronika_schippani.webp",
 	"Mathematik, Ethik, SOPK",
 	"Pizza essen in Neapel",
 	"Buchhalterin (Schwerpunkt Steuern)",
@@ -1363,7 +1363,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"ZIVK@htl-donaustadt.at",
-	"patrick_zivkovic.jpg",
+	"patrick_zivkovic.webp",
 	"SEW, NWT, MEDT",
 	"Netzwerktechnik - Security Bereich",
 	"HTL Donaustadt",
@@ -1402,7 +1402,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"42",
 	"LANG@htl-donaustadt.at",
-	"lucie_langer.jpg",
+	"lucie_langer.webp",
 	"AM, NWT (Kryptografie)",
 	"Mischung aus Entspannung und Erkundung von Neuem, draußen sein",
 	"Gymnasium in Deutschland",
@@ -1440,7 +1440,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"43",
 	"ANGE@htl-donaustadt.at",
-	"thomas_angermayer.jpg",
+	"thomas_angermayer.webp",
 	"NWT1, ITP2 (DA-Betreuung)",
 	"NWT1",
 	"VS, AHS (Unterstufe), HTL, FH",
@@ -1481,7 +1481,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"54",
 	"SPAC@htl-donaustadt.at",
-	"thomas_spachinger.jpg",
+	"thomas_spachinger.webp",
 	"SEW, NWT, LA1, KSN, ITP2",
 	"Entspannen, ein bisschen Sport, ein bisschen Kultur",
 	"Unterstufe BRG, dann HTL Elektrotechnik",
@@ -1526,7 +1526,7 @@ INSERT INTO persons (
 	"Lehrer",
 	"58",
 	"HIES@htl-donaustadt.at",
-	"default.jpg",
+	"default.webp",
 	"ITP2, SEW, INSY",
 	"Kann mich nicht entscheiden!",
 	"Möglichst weit weg fremde Länder/Kulturen erkunden",
@@ -1557,7 +1557,7 @@ INSERT INTO persons (
 	"f",
 	"Lehrer",
 	"MESA@htl-donaustadt.at",
-	"merisa_mesanovic.jpg"
+	"merisa_mesanovic.webp"
 );
 
 INSERT INTO persons (
@@ -1573,7 +1573,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"MAMU@htl-donaustadt.at",
-	"default.jpg"
+	"default.webp"
 );
 
 INSERT INTO persons (
@@ -1589,7 +1589,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"WURT@htl-donaustadt.at",
-	"thomas_wurst.jpg"
+	"thomas_wurst.webp"
 );
 
 INSERT INTO persons (
@@ -1605,7 +1605,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"LOIB@htl-donaustadt.at",
-	"bernhard_loibner.jpg"
+	"bernhard_loibner.webp"
 );
 
 INSERT INTO persons (
@@ -1621,7 +1621,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"KOVA@htl-donaustadt.at",
-	"peter_kovar.jpg"
+	"peter_kovar.webp"
 );
 
 INSERT INTO persons (
@@ -1637,7 +1637,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"BRAU@htl-donaustadt.at",
-	"sebastian_braunsberger.jpg"
+	"default.webp"
 );
 
 INSERT INTO persons (
@@ -1653,7 +1653,7 @@ INSERT INTO persons (
 	"f",
 	"Lehrer",
 	"SMEZ@htl-donaustadt.at",
-	"default.jpg"
+	"default.webp"
 );
 
 INSERT INTO persons (
@@ -1669,7 +1669,7 @@ INSERT INTO persons (
 	"f",
 	"Lehrer",
 	"WASA@htl-donaustadt.at",
-	"default.jpg"
+	"default.webp"
 );
 
 INSERT INTO persons (
@@ -1685,7 +1685,7 @@ INSERT INTO persons (
 	"f",
 	"Lehrer",
 	"BAUE@htl-donaustadt.at",
-	"monika_bauer.jpg"
+	"monika_bauer.webp"
 );
 
 INSERT INTO persons (
@@ -1701,7 +1701,7 @@ INSERT INTO persons (
 	"f",
 	"Lehrer",
 	"VLCK@htl-donaustadt.at",
-	"default.jpg"
+	"default.webp"
 );
 
 INSERT INTO persons (
@@ -1717,7 +1717,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"PULE@htl-donaustadt.at",
-	"default.jpg"
+	"default.webp"
 );
 
 INSERT INTO persons (
@@ -1733,7 +1733,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"FRYS@htl-donaustadt.at",
-	"wilhelm_frysak.jpg"
+	"wilhelm_frysak.webp"
 );
 
 

@@ -41,8 +41,8 @@
 -- INSERT INTO comments (name,message,dat,personid) 
 -- VALUES ("heislbaugmbh","seas", "2023-05-24", 12);
 
-
--- //UPDATE persons set imageName="viktor_trojan.webp" WHERE   (select personid from persons where lastname="Trojan" LIMIT 1)
+-- select * from persons WHERE personid=(select personid from persons where lastname="Trojan" LIMIT 1);
+-- UPDATE persons set imageName="viktor_trojan.webp" WHERE personid=(select personid from persons where lastname="Trojan" LIMIT 1);
 
 
 
