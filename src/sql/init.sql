@@ -1,4 +1,4 @@
-DROP DATABASE classcircle;
+-- DROP DATABASE classcircle;
 
 SET NAMES 'utf8mb4';
 
