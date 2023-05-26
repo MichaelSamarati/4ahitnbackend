@@ -26,20 +26,20 @@ var imagesMap = new Map();
 server.on("clientError", (err, socket) => {
   console.log("clientError:");
   console.log(err);
-  console.log("err.code: "+ err.code);
+  console.log("err.code: " + err.code);
   // if (err.code === "ECONNRESET" || !socket.writable)
   //   socket.end("HTTP/2 400 Bad Request\n");
-  socket.end("Error occured! clientError");
+  socket.destroy();
   console.log("client error\n", err);
 });
 
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
   console.log("New connection from " + clientIp);
-  socket.on('close', function(exception) {
-    console.log('SOCKET CLOSED');
-  })
-  
+  socket.on("close", function (exception) {
+    console.log("SOCKET CLOSED");
+  });
+
   socket.on("error", (err) => {
     console.log("error: " + err.message);
     console.log(err.stack);
@@ -115,7 +115,6 @@ io.on("connection", (socket) => {
     } catch (e) {
       //socket.emit("comments_failure", "Error occured!");
       console.log("comments_success");
-
     }
   });
   socket.on("comment_insert", async (data) => {
@@ -139,7 +138,6 @@ io.on("connection", (socket) => {
     } catch (e) {
       //socket.emit("comments_insert_failure", "Error occured!");
       console.log("comments_insert_failure");
-
     }
   });
 });
