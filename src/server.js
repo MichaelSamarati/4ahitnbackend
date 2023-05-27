@@ -14,8 +14,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*:*",
-    // methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+    origin: "*",
+    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
     // allowedHeaders: ["my-custom-header"],
     // allowRequest: (req, callback) => {
     //   const noOriginHeader = req.headers.origin === undefined;
