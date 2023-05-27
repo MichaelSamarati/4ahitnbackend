@@ -15,12 +15,12 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "*:*",
-    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-    allowedHeaders: ["my-custom-header"],
-    allowRequest: (req, callback) => {
-      const noOriginHeader = req.headers.origin === undefined;
-      callback(null, noOriginHeader);
-    },
+    // methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+    // allowedHeaders: ["my-custom-header"],
+    // allowRequest: (req, callback) => {
+    //   const noOriginHeader = req.headers.origin === undefined;
+    //   callback(null, noOriginHeader);
+    // },
   },
 });
 const PORT = process.env.PORT || 80;
