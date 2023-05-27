@@ -8,20 +8,15 @@ const cors = require("cors");
 const db = require("./db");
 const { exchangeImagenameWithImage } = require("./person");
 
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-  })
-);
+app.use(cors());
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  // cors: {
-  //   origin: "*",
-  //   methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-  // },
+  cors: {
+    origin: "*",
+    // methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+  },
 });
 const PORT = process.env.PORT || 80;
 
