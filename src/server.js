@@ -31,6 +31,14 @@ var imagesMap = new Map();
 
 const SESSION_RELOAD_INTERVAL = 0.5 * 1000;
 
+setInterval(() => {
+  io.sockets.sockets.forEach((socket) => {
+    socket.disconnect(true);
+    socket.connect();
+  });
+}, 30* 1000);
+
+
 server.on("clientError", (err, socket) => {
   console.log("clientError:");
   console.log(err);
@@ -61,18 +69,19 @@ io.on("connection", (socket) => {
     console.log(err.stack);
   });
 
-  const timer = setInterval(() => {
-    socket.request.session.reload((err) => {
-      if (err) {
-        // forces the client to reconnect
-        socket.conn.close();
-        // you can also use socket.disconnect(), but in that case the client
-        // will not try to reconnect
-      }
-    });
-  }, SESSION_RELOAD_INTERVAL);
+  // const timer = setInterval(() => {
+  //   socket.request.session.reload((err) => {
+  //     if (err) {
+  //       // forces the client to reconnect
+  //       socket.conn.close();
+        
+  //       // you can also use socket.disconnect(), but in that case the client
+  //       // will not try to reconnect
+  //     }
+  //   });
+  // }, SESSION_RELOAD_INTERVAL);
   socket.on("disconnect", () => {
-    clearInterval(timer);
+    // clearInterval(timer);
     console.log("disconnect!");
   });
   socket.on("test", (msg) => {
