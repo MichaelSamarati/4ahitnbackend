@@ -31,12 +31,12 @@ var imagesMap = new Map();
 
 const SESSION_RELOAD_INTERVAL = 0.5 * 1000;
 
-setInterval(() => {
-  io.sockets.sockets.forEach((socket) => {
-    socket.disconnect(true);
-    socket.connect();
-  });
-}, 30* 1000);
+// setInterval(() => {
+//   io.sockets.sockets.forEach((socket) => {
+//     socket.disconnect(true);
+//     const newSocket = io.connect(socket.client.conn.);
+//   });
+// }, 30* 1000);
 
 
 server.on("clientError", (err, socket) => {
