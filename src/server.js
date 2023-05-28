@@ -15,7 +15,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+    // methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
     // allowedHeaders: ["my-custom-header"],
     // allowRequest: (req, callback) => {
     //   const noOriginHeader = req.headers.origin === undefined;
@@ -29,13 +29,15 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
+const SESSION_RELOAD_INTERVAL = 0.5 * 1000;
+
 server.on("clientError", (err, socket) => {
   console.log("clientError:");
   console.log(err);
   console.log("err.code: " + err.code);
   // if (err.code === "ECONNRESET" || !socket.writable)
   //   socket.end("HTTP/2 400 Bad Request\n");
-  socket.destroy();
+  // socket.destroy();
   console.log("client error\n", err);
 });
 
@@ -59,7 +61,20 @@ io.on("connection", (socket) => {
     console.log(err.stack);
   });
 
-  socket.on("disconnect", () => {});
+  const timer = setInterval(() => {
+    socket.request.session.reload((err) => {
+      if (err) {
+        // forces the client to reconnect
+        socket.conn.close();
+        // you can also use socket.disconnect(), but in that case the client
+        // will not try to reconnect
+      }
+    });
+  }, SESSION_RELOAD_INTERVAL);
+  socket.on("disconnect", () => {
+    clearInterval(timer);
+    console.log("disconnect!");
+  });
   socket.on("test", (msg) => {
     console.log(msg);
   });
