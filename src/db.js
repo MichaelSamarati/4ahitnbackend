@@ -15,6 +15,7 @@ var mysqlQuery;
 function handleDisconnect() {
   connection = mysql.createConnection(db_config);
   connection.connect(function (err) {
+    console.log("Connected to database!");
     if (err) {
       console.log("error when connecting to db:", err);
       setTimeout(handleDisconnect, 2000);
@@ -30,8 +31,6 @@ function handleDisconnect() {
     // }
   });
   mysqlQuery = util.promisify(connection.query).bind(connection);
-
- 
 }
 
 handleDisconnect();
