@@ -29,7 +29,7 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
-const SESSION_RELOAD_INTERVAL = 0.5 * 1000;
+const SESSION_RELOAD_INTERVAL = 120 * 60 * 1000;
 
 // setInterval(() => {
 //   io.sockets.sockets.forEach((socket) => {
@@ -37,7 +37,6 @@ const SESSION_RELOAD_INTERVAL = 0.5 * 1000;
 //     const newSocket = io.connect(socket.client.conn.);
 //   });
 // }, 30* 1000);
-
 
 server.on("clientError", (err, socket) => {
   console.log("clientError:");
@@ -74,7 +73,7 @@ io.on("connection", (socket) => {
   //     if (err) {
   //       // forces the client to reconnect
   //       socket.conn.close();
-        
+
   //       // you can also use socket.disconnect(), but in that case the client
   //       // will not try to reconnect
   //     }
