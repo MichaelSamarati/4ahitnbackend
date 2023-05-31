@@ -80,7 +80,6 @@ io.on("connection", (socket) => {
   //   });
   // }, SESSION_RELOAD_INTERVAL);
   socket.on("disconnect", () => {
-    // clearInterval(timer);
     console.log("disconnect!");
   });
   socket.on("test", (msg) => {
@@ -92,7 +91,6 @@ io.on("connection", (socket) => {
       const persons = await db.query(
         "select * from persons where personRole='Schüler' order by lastname"
       );
-      console.log("students fetched from database!");
       socket.emit("students_length", { length: persons.length });
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
@@ -103,9 +101,7 @@ io.on("connection", (socket) => {
       }
       console.log("students process finished!");
     } catch (e) {
-      console.log("students_failure error 1");
-      // socket.emit("students_failure", "Error occured!");
-      console.log("students_failure error 2");
+      console.log("students_failure error");
     }
     console.log("students end");
   });
@@ -115,7 +111,6 @@ io.on("connection", (socket) => {
       const persons = await db.query(
         "select * from persons where personRole='Lehrer' order by lastname"
       );
-      console.log("teachers fetched from database!");
       socket.emit("teachers_length", { length: persons.length });
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
@@ -126,11 +121,8 @@ io.on("connection", (socket) => {
       }
       console.log("teachers process finished!");
     } catch (e) {
-      console.log("teachers_failure error 1");
-      // socket.emit("teachers_failure", "Error occured!");
-      console.log("teachers_failure error 2");
+      console.log("teachers_failure error");
     }
-    console.log("teachers end");
   });
   socket.on("comments", async (data) => {
     console.log("comments requested!");
@@ -142,7 +134,6 @@ io.on("connection", (socket) => {
       );
       socket.emit("comments_success", comments);
     } catch (e) {
-      //socket.emit("comments_failure", "Error occured!");
       console.log("comments_success");
     }
   });
@@ -165,7 +156,6 @@ io.on("connection", (socket) => {
       );
       socket.emit("comments_insert_success", "Success!");
     } catch (e) {
-      //socket.emit("comments_insert_failure", "Error occured!");
       console.log("comments_insert_failure");
     }
   });
@@ -175,6 +165,7 @@ readImageFiles();
 
 server.listen(PORT, () => {
   console.log("Backend server is listening on port: " + PORT + " ...");
+  console.log("ITP2 is my favourite subject 😍💕 and it is an honor for me to serve the backend 24/7 with an uptime of 100% 😎🫡")
 });
 
 async function readImageFiles() {
