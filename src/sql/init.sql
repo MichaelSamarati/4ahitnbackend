@@ -1736,4 +1736,20 @@ INSERT INTO persons (
 	"wilhelm_frysak.webp"
 );
 
+INSERT INTO persons (
+	forename,
+	lastname,
+	gender,
+	personRole,
+	email,
+	imageName
+) VALUES (
+	"Thomas",
+	"Cloupek",
+	"m",
+	"Lehrer",
+	"CLOU@htl-donaustadt.at",
+	"default.webp"
+);
+
 
