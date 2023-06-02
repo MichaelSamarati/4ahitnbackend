@@ -1,23 +1,34 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const http = require("http");
+const https = require("https");
 const { Server } = require("socket.io");
 const cors = require("cors");
-
+const fs = require("fs");
 const db = require("./db");
 const { exchangeImagenameWithImage } = require("./person");
 
 app.use(cors());
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
+const server = https.createServer(
+  {
+    key: fs.readFileSync("/etc/letsencrypt/live/example.com/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/example.com/cert.pem"),
+  },
+  app
+);
+// /etc/letsencrypt/live/example.com/privkey.pem
+// /etc/letsencrypt/live/example.com/chain.pem
+// /etc/letsencrypt/live/example.com/fullchain.pem
+// /etc/letsencrypt/live/example.com/cert.pem
 const io = new Server(server, {
   cors: {
     origin: "*",
   },
 });
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 443;
 
 const file = require("./file");
 
