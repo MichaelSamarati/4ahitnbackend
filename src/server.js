@@ -12,10 +12,21 @@ app.use(cors());
 
 // const server = http.createServer(app);
 
+console.log(
+  fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem")
+);
+console.log(
+  fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem")
+);
+
 const server = https.createServer(
   {
-    key: fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem"),
+    key: fs.readFileSync(
+      "/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem"
+    ),
+    cert: fs.readFileSync(
+      "/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem"
+    ),
   },
   app
 );
