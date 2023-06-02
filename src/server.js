@@ -5,6 +5,7 @@ const https = require("https");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const fs = require("fs");
+const fs = require("path");
 const db = require("./db");
 const { exchangeImagenameWithImage } = require("./person");
 
@@ -12,21 +13,17 @@ app.use(cors());
 
 // const server = http.createServer(app);
 
-console.log(
-  fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem")
-);
-console.log(
-  fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem")
-);
+// console.log(
+//   fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem")
+// );
+// console.log(
+//   fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem")
+// );
 
 const server = https.createServer(
   {
-    key: fs.readFileSync(
-      "/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem"
-    ),
-    cert: fs.readFileSync(
-      "/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem"
-    ),
+    key: fs.readFileSync(path.join(__dirname, "cert", "privkey.pem")),
+    cert: fs.readFileSync(path.join(__dirname, "cert", "cert.pem")),
   },
   app
 );
