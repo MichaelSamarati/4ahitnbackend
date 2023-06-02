@@ -45,7 +45,7 @@
 -- UPDATE persons set imageName="viktor_trojan.webp" WHERE personid=(select personid from persons where lastname="Trojan" LIMIT 1);
 
 
-
+-- UPDATE comments set message="Herr Professor" WHERE name="anonymous75" LIMIT 1;
 
 
 
