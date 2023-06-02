@@ -11,15 +11,6 @@ const { exchangeImagenameWithImage } = require("./person");
 
 app.use(cors());
 
-// const server = http.createServer(app);
-
-// console.log(
-//   fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem")
-// );
-// console.log(
-//   fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem")
-// );
-
 const server = https.createServer(
   {
     key: fs.readFileSync(path.join(__dirname, "..", "cert", "privkey.pem")),
@@ -27,10 +18,7 @@ const server = https.createServer(
   },
   app
 );
-// /etc/letsencrypt/live/example.com/privkey.pem
-// /etc/letsencrypt/live/example.com/chain.pem
-// /etc/letsencrypt/live/example.com/fullchain.pem
-// /etc/letsencrypt/live/example.com/cert.pem
+
 const io = new Server(server, {
   cors: {
     origin: "*",
