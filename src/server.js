@@ -15,12 +15,6 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "*",
-    // methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-    // allowedHeaders: ["my-custom-header"],
-    // allowRequest: (req, callback) => {
-    //   const noOriginHeader = req.headers.origin === undefined;
-    //   callback(null, noOriginHeader);
-    // },
   },
 });
 const PORT = process.env.PORT || 80;
@@ -29,58 +23,26 @@ const file = require("./file");
 
 var imagesMap = new Map();
 
-const SESSION_RELOAD_INTERVAL = 120 * 60 * 1000;
-
-// setInterval(() => {
-//   io.sockets.sockets.forEach((socket) => {
-//     socket.disconnect(true);
-//     const newSocket = io.connect(socket.client.conn.);
-//   });
-// }, 30* 1000);
-
 server.on("clientError", (err, socket) => {
-  console.log("clientError:");
-  console.log(err);
-  console.log("err.code: " + err.code);
-  // if (err.code === "ECONNRESET" || !socket.writable)
-  //   socket.end("HTTP/2 400 Bad Request\n");
-  // socket.destroy();
-  console.log("client error\n", err);
+  console.log("clientError:", err);
 });
 
 io.on("connection", (socket) => {
   var clientIp = socket.conn.remoteAddress;
   console.log("New connection from " + clientIp);
   socket.on("close", function (exception) {
-    console.log("SOCKET CLOSED");
+    console.log("Socket closed");
   });
-
   socket.on("error", (err) => {
-    console.log("error: " + err.message);
-    console.log(err.stack);
+    console.log("error: ", err);
   });
   socket.on("connect_error", (err) => {
-    console.log("connect_error: " + err.message);
-    console.log(err.stack);
+    console.log("connect_error: ", err);
   });
   socket.on("connect_failed", (err) => {
-    console.log("connect_failed: " + err.message);
-    console.log(err.stack);
+    console.log("connect_failed: ", err);
   });
-
-  // const timer = setInterval(() => {
-  //   socket.request.session.reload((err) => {
-  //     if (err) {
-  //       // forces the client to reconnect
-  //       socket.conn.close();
-
-  //       // you can also use socket.disconnect(), but in that case the client
-  //       // will not try to reconnect
-  //     }
-  //   });
-  // }, SESSION_RELOAD_INTERVAL);
   socket.on("disconnect", () => {
-    // clearInterval(timer);
     console.log("disconnect!");
   });
   socket.on("test", (msg) => {
@@ -92,7 +54,6 @@ io.on("connection", (socket) => {
       const persons = await db.query(
         "select * from persons where personRole='Schüler' order by lastname"
       );
-      console.log("students fetched from database!");
       socket.emit("students_length", { length: persons.length });
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
@@ -103,9 +64,7 @@ io.on("connection", (socket) => {
       }
       console.log("students process finished!");
     } catch (e) {
-      console.log("students_failure error 1");
-      // socket.emit("students_failure", "Error occured!");
-      console.log("students_failure error 2");
+      console.log("students_failure error");
     }
     console.log("students end");
   });
@@ -115,7 +74,6 @@ io.on("connection", (socket) => {
       const persons = await db.query(
         "select * from persons where personRole='Lehrer' order by lastname"
       );
-      console.log("teachers fetched from database!");
       socket.emit("teachers_length", { length: persons.length });
       for (const person of persons) {
         let personWithImage = await exchangeImagenameWithImage(
@@ -126,11 +84,8 @@ io.on("connection", (socket) => {
       }
       console.log("teachers process finished!");
     } catch (e) {
-      console.log("teachers_failure error 1");
-      // socket.emit("teachers_failure", "Error occured!");
-      console.log("teachers_failure error 2");
+      console.log("teachers_failure error");
     }
-    console.log("teachers end");
   });
   socket.on("comments", async (data) => {
     console.log("comments requested!");
@@ -142,7 +97,6 @@ io.on("connection", (socket) => {
       );
       socket.emit("comments_success", comments);
     } catch (e) {
-      //socket.emit("comments_failure", "Error occured!");
       console.log("comments_success");
     }
   });
@@ -165,7 +119,6 @@ io.on("connection", (socket) => {
       );
       socket.emit("comments_insert_success", "Success!");
     } catch (e) {
-      //socket.emit("comments_insert_failure", "Error occured!");
       console.log("comments_insert_failure");
     }
   });
@@ -175,6 +128,9 @@ readImageFiles();
 
 server.listen(PORT, () => {
   console.log("Backend server is listening on port: " + PORT + " ...");
+  console.log(
+    "ITP2 is my favourite subject 😍💕 and it is an honor for me to serve the backend 24/7 with an uptime of 100% 😎🫡"
+  );
 });
 
 async function readImageFiles() {
@@ -204,7 +160,5 @@ function hello() {
 hello();
 
 process.on("uncaughtException", function (err) {
-  console.log("uncaughtException:");
-  console.error(err.stack);
-  console.log("Node NOT Exiting...");
+  console.log("uncaughtException:", err);
 });

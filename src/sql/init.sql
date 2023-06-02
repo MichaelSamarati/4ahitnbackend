@@ -1128,7 +1128,7 @@ INSERT INTO persons (
 	"Kavinsky - Nightcall",
 	"Chicken-Wings im Sale!!1 bei Lidl",
 	"Lieber im Stehen scheißen, als in der Scheiße stehen.",
-	"Nachdenken",
+	"Nachdenken; Laufen; Programmieren; Gaming",
 	"Keine",
 	"Keine",
 	"NMS",
