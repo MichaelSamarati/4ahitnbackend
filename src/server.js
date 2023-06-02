@@ -5,7 +5,7 @@ const https = require("https");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const fs = require("fs");
-const fs = require("path");
+const path = require("path");
 const db = require("./db");
 const { exchangeImagenameWithImage } = require("./person");
 
