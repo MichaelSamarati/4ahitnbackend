@@ -1749,7 +1749,7 @@ INSERT INTO persons (
 	"m",
 	"Lehrer",
 	"CLOU@htl-donaustadt.at",
-	"default.webp"
+	"thomas_cloupek.webp"
 );
 
 
