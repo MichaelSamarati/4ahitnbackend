@@ -14,8 +14,8 @@ app.use(cors());
 
 const server = https.createServer(
   {
-    key: fs.readFileSync("/etc/letsencrypt/live/example.com/privkey.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/example.com/cert.pem"),
+    key: fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/samarati.dynamic-dns.net/cert.pem"),
   },
   app
 );
